@@ -18,6 +18,12 @@
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       font-size: 18px;
+      box-sizing: border-box;
+      width: 100vw;
+      min-width: 320px;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
     }
     header {
       background-color: var(--primary);
@@ -45,7 +51,6 @@
       margin: 0; font-size:2.5vw; color: #fff;
       min-width: 240px;
     }
-
     .page {
       display: flex;
       flex-direction: row;
@@ -56,19 +61,25 @@
       padding: 2vw 2vw 0 2vw;
       max-width: 1200px;
       margin: 0 auto;
+      width: 100%;
+      position: relative;
     }
     main {
       flex: 1 1 0%;
       min-width: 0;
       max-width: 740px;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
     }
     aside.sidebar {
       width: 320px;
-      max-width: 32vw;
       min-width: 240px;
+      max-width: 360px;
       position: relative;
       z-index: 2;
+      flex: 0 0 320px;
     }
     .card {
       background: var(--card-bg);
@@ -170,7 +181,7 @@
     /* --- インスタリール埋め込みサイズ調整 --- */
     .reel-wrapper {
       width: 100%;
-      max-width: 700px;
+      max-width: 420px;
       margin: 0 auto;
       aspect-ratio: 9/16;
       background: #fff;
@@ -184,23 +195,24 @@
     .instagram-embed-full {
       width: 100%;
       height: 100%;
-      min-height: 360px;
-      max-height: 700px;
+      min-height: 320px;
       border: none;
       background: #fff;
       display: block;
+      aspect-ratio: 9/16;
     }
+
     @media (max-width:1200px) {
       .page { max-width: 98vw; }
       main { max-width: 100vw; }
-      .reel-wrapper { max-width: 98vw; }
+      aside.sidebar { max-width: 36vw; }
+      .reel-wrapper { max-width: 38vw; }
     }
     @media (max-width:1000px) {
       .page { flex-direction: column; gap:0; max-width:100vw;}
-      aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw;}
+      aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw; flex: none;}
       main { max-width: 100vw;}
-      .repair-table {font-size:0.99em;}
-      .reel-wrapper { max-width: 98vw; }
+      .reel-wrapper { max-width: 88vw; }
       .instagram-embed-full { min-height: 240px; }
     }
     @media (max-width:700px){
@@ -212,7 +224,7 @@
       header .header-inner{flex-direction:column;}
       header img {max-width:150px;}
       header h1 {font-size:1.3em;}
-      .reel-wrapper { max-width: 100vw; border-radius: 8px;}
+      .reel-wrapper { max-width: 98vw; border-radius: 8px;}
       .instagram-embed-full { min-height: 140px; }
       aside.sidebar {padding-bottom: 24px;}
     }
@@ -257,7 +269,7 @@
     <main>
       <section class="hero card">
         <h2>最新CM（リール）</h2>
-        <!-- Instagramリールを縦長画格＆サイドバーと重ならないように中央固定 -->
+        <!-- Instagramリール 綺麗に中央に収まる -->
         <div class="reel-wrapper">
           <iframe 
             class="instagram-embed-full"
