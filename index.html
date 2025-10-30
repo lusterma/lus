@@ -18,6 +18,12 @@
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       font-size: 18px;
+      box-sizing: border-box;
+      width: 100vw;
+      min-width: 320px;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
     }
     header {
       background-color: var(--primary);
@@ -45,18 +51,43 @@
       margin: 0; font-size:2.5vw; color: #fff;
       min-width: 240px;
     }
+    .catchphrase {
+      margin: 6px 0 0 0;
+      font-weight: 700;
+      font-size: 1.15em;
+      color: #ffe27b;
+      letter-spacing: 0.03em;
+      text-shadow: 0 2px 8px rgba(40,40,40,0.12);
+    }
     .page {
-      width: 100vw;
       display: flex;
+      flex-direction: row;
       gap: 2vw;
       align-items: flex-start;
       min-height: 80vh;
       box-sizing: border-box;
       padding: 2vw 2vw 0 2vw;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
     }
-    main { flex:1 1 0%; min-width:0; }
+    main {
+      flex: 1 1 0%;
+      min-width: 0;
+      max-width: 740px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+    }
     aside.sidebar {
-      width: 340px; max-width: 32vw; min-width: 260px;
+      width: 320px;
+      min-width: 240px;
+      max-width: 360px;
+      position: relative;
+      z-index: 2;
+      flex: 0 0 320px;
     }
     .card {
       background: var(--card-bg);
@@ -65,6 +96,7 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       margin-bottom: 1.5vw;
       box-sizing: border-box;
+      overflow: hidden;
     }
     h2 {
       color: #34495e; margin-top:0;
@@ -79,12 +111,19 @@
       display:flex; gap:1vw; align-items:flex-start;
       min-height: 120px;
     }
-    .service-img {
-      width:10vw; min-width:110px; height:auto;
-      border-radius:0.7vw; object-fit:cover;
-      background:#eee;
-      max-height: 160px;
-      box-shadow: 0 2px 10px rgba(80,80,80,0.06);
+    .service-img, .service-stamp {
+      width:2.7em; min-width:2.2em; max-width:3em;
+      height:2.7em; min-height:2.2em; max-height:3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size:2.4em;
+      margin-right:14px;
+      flex-shrink: 0;
+      background: none;
+      border-radius: 0.7vw;
+      box-shadow: none;
+      object-fit: contain;
     }
     .service-text { flex:1; }
     .contact {
@@ -117,19 +156,21 @@
     /* 修理実績表 */
     .repair-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
+      border-collapse: collapse;
       background: #fafdff;
       font-size: 1.04em;
       box-shadow: 0 2px 10px rgba(50,80,120,0.03);
       margin-bottom: 4px;
       min-width: 700px;
+      table-layout: fixed;
     }
     .repair-table th, .repair-table td {
       border: 1.3px solid #e0e7ef;
       padding: 10px 8px;
       text-align: center;
       vertical-align: middle;
+      word-break: break-all;
+      width: 16.66%;
     }
     .repair-table th {
       background: #e9f3fb;
@@ -151,65 +192,103 @@
     }
     .repair-table td:nth-child(5) { color: #c0392b; }
     .repair-table td:nth-child(6) { color: #2274a5; }
+
     /* --- インスタリール埋め込みサイズ調整 --- */
     .reel-wrapper {
-      max-width: 360px;
+      width: 100%;
+      max-width: 420px;
       margin: 0 auto;
-      width: 95vw;
-    }
-    .reel-wrapper blockquote.instagram-media {
-      width: 100% !important;
-      min-width: 0 !important;
-      max-width: 360px !important;
-      margin: 0 auto !important;
-      height: 440px !important;
-      overflow: hidden;
-      box-sizing: border-box;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      padding: 0 !important;
+      aspect-ratio: 9/16;
       background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .instagram-embed-full {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: none;
+      background: #fff;
+      display: block;
+      aspect-ratio: 9/16;
+    }
+
+    @media (max-width:1200px) {
+      .page { max-width: 98vw; }
+      main { max-width: 100vw; }
+      aside.sidebar { max-width: 36vw; }
+      .reel-wrapper { max-width: 38vw; }
     }
     @media (max-width:1000px) {
-      .page { flex-direction: column; gap:0; }
-      aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw;}
-      .repair-table {font-size:0.99em;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        max-width: 99vw !important;
-        width: 99vw !important;
-        min-width: 0 !important;
-        height: 58vw !important;
-        min-height: 260px !important;
-        border-radius: 10px;
-      }
+      .page { flex-direction: column; gap:0; max-width:100vw;}
+      aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw; flex: none;}
+      main { max-width: 100vw;}
+      .reel-wrapper { max-width: 88vw; }
+      .instagram-embed-full { min-height: 240px; }
     }
     @media (max-width:700px){
+      .page {padding: 2vw 1vw 0 1vw;}
       .repair-table th, .repair-table td { font-size:0.9em; padding:7px 2px;}
       .repair-table {font-size:0.95em; min-width:540px;}
-      .service-img { width:27vw; min-width:70px; max-width:120px;}
+      .service-img, .service-stamp { width:2em; min-width:2em; max-width:2.4em; font-size:2em;}
       .card {padding:3vw 2vw;}
       header .header-inner{flex-direction:column;}
       header img {max-width:150px;}
       header h1 {font-size:1.3em;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        max-width: 100vw !important;
-        width: 100vw !important;
-        min-width: 0 !important;
-        height: 60vw !important;
-        min-height: 180px !important;
-        border-radius: 6px;
-      }
+      .reel-wrapper { max-width: 98vw; border-radius: 8px;}
+      .instagram-embed-full { min-height: 140px; }
+      aside.sidebar {padding-bottom: 24px;}
     }
     @media (max-width:500px){
       .repair-table th, .repair-table td { font-size:0.89em; padding:5px 1px;}
       .repair-table {min-width:420px;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        height: 56vw !important;
-        min-height: 120px !important;
-      }
+      .reel-wrapper { border-radius: 4px;}
+      .instagram-embed-full { min-height: 100px; }
+    }
+    /* サイドバーのカード調整 */
+    .sidebar .card {
+      margin-bottom: 1.5vw;
+      padding: 1vw 1vw 1vw 1vw;
+    }
+    .insta-profile {
+      display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;
+    }
+    .insta-profile .avatar {
+      width: 52px; height: 52px; border-radius: 50%; object-fit: cover; background: #eee;
+      border: 2px solid #ddd;
+    }
+    .sidebar .follow-btn {
+      display:inline-block; margin-top:0.3em; font-weight:600; color: #fff; background: var(--accent);
+      border-radius:4px; padding: 2px 10px; text-decoration:none; font-size: 0.97em;
+      box-shadow: 0 2px 8px rgba(50,80,200,0.08);
+    }
+    /* はてなブログの新着記事リスト */
+    .blog-list {
+      list-style: none;
+      margin: 0 0 8px 0;
+      padding: 0;
+      font-size: 1em;
+    }
+    .blog-list li {
+      margin: 0 0 4px 0;
+      padding: 0;
+      line-height: 1.3;
+      border-left: 3px solid var(--accent);
+      padding-left: 7px;
+      background: #f6fafd;
+      border-radius: 3px;
+    }
+    .blog-link {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--primary);
+      text-decoration: underline;
+      font-size: 1.05em;
     }
   </style>
 </head>
@@ -220,6 +299,7 @@
       <img src="./images/logo.png" alt="ラスターマシナリー ロゴ" />
       <div>
         <h1>ラスターマシナリー (Luster Machinery)</h1>
+        <div class="catchphrase">全国現場出張対応是非ご相談ください</div>
         <p style="margin:4px 0 0 0; color:#dfe9ef;">中古工作機械の販売・修理で製造業をサポート</p>
       </div>
     </div>
@@ -229,15 +309,17 @@
     <main>
       <section class="hero card">
         <h2>最新CM（リール）</h2>
-        <div class="reel-wrapper insta-embed">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DLVA_KhAlHj/"
-            data-instgrm-version="14"
-            style="background:#fff; border:0; margin:0 auto; width:100%;">
-            <div style="padding:8px 0;">
-              <a href="https://www.instagram.com/reel/DLVA_KhAlHj/" target="_blank" rel="noopener noreferrer">Instagramでリールを表示</a>
-            </div>
-          </blockquote>
+        <div class="reel-wrapper">
+          <iframe 
+            class="instagram-embed-full"
+            src="https://www.instagram.com/reel/DLVA_KhAlHj/embed/"
+            allowtransparency="true" 
+            allowfullscreen="true"
+            scrolling="no"
+            frameborder="0"
+            title="Instagram Reel"
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
 
@@ -255,8 +337,8 @@
         <h2>主なサービス</h2>
         <ul class="service-list">
           <li>
-            <!-- 修理・メンテナンス画像をImage 1に差し替え -->
-            <img src="https://files.oaiusercontent.com/file-68b922b1-15ef-4e8e-bf6a-ddd3a6b076a9/8e5f7e7a-0197-41a2-91b6-2e0a0e715d8b.png" alt="修理・メンテナンス" class="service-img">
+            <!-- かわいいスタンプ（🔧）-->
+            <span class="service-stamp">🔧</span>
             <div class="service-text">
               <strong>修理・メンテナンス</strong>
               <p style="margin:6px 0 0 0;">
@@ -265,7 +347,8 @@
             </div>
           </li>
           <li>
-            <img src="./images/service1.jpg" alt="工作機械・機械販売" class="service-img">
+            <!-- かわいいスタンプ（🤖）-->
+            <span class="service-stamp">🤖</span>
             <div class="service-text">
               <strong>工作機械・機械販売</strong>
               <p style="margin:6px 0 0 0;">
@@ -274,16 +357,18 @@
             </div>
           </li>
           <li>
-            <img src="./images/service3.jpg" alt="マッスルスーツ" class="service-img">
+            <!-- かわいいスタンプ（💪）-->
+            <span class="service-stamp">💪</span>
             <div class="service-text">
               <strong>マッスルスーツ</strong>
-              <p style="margin:6px 0 0 0;">作業の効率化をサポートします。導入相談・販売・保守まで対応。</p>
+              <p style="margin:6px 0 0 0;">
+                作業の効率化をサポートします。導入相談・販売・保守まで対応。
+              </p>
             </div>
           </li>
         </ul>
       </section>
 
-      <!-- 修理実績（表） -->
       <section class="card" id="repair-records" aria-labelledby="repair-records-title">
         <h2 id="repair-records-title">修理実績</h2>
         <div style="overflow-x:auto;">
@@ -405,6 +490,17 @@
     </main>
 
     <aside class="sidebar">
+      <!-- はてなブログ新着記事リスト -->
+      <div class="card">
+        <a href="https://luster55.hateblo.jp/" class="blog-link" target="_blank" rel="noopener noreferrer">▶ キカイブログ（はてなブログ）</a>
+        <ul class="blog-list">
+          <li><a href="https://luster55.hateblo.jp/entry/2024/10/15/100000" target="_blank" rel="noopener noreferrer">旋盤修理日記：主軸ベアリング交換（2024/10/15）</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/09/27/100000" target="_blank" rel="noopener noreferrer">NC旋盤の油圧ユニット修理例（2024/09/27）</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/09/10/100000" target="_blank" rel="noopener noreferrer">ラジアルボール盤のクランプ不良（2024/09/10）</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/08/25/100000" target="_blank" rel="noopener noreferrer">【事例】古い旋盤の電装トラブル対応（2024/08/25）</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/07/30/100000" target="_blank" rel="noopener noreferrer">帯鋸盤シリンダー修理レポート（2024/07/30）</a></li>
+        </ul>
+      </div>
       <div class="card">
         <h2>Instagram</h2>
         <div class="insta-profile">
@@ -419,14 +515,6 @@
 
       <div class="card">
         <h2>最新投稿</h2>
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DLVA_KhAlHj/"
-          data-instgrm-version="14"
-          style="background:#fff; border:0; margin:0 auto; width:100%;">
-          <div style="padding:8px 0;">
-            <a href="https://www.instagram.com/reel/DLVA_KhAlHj/" target="_blank" rel="noopener noreferrer">Instagramでリールを表示</a>
-          </div>
-        </blockquote>
         <p style="font-size:0.9rem; color:#666; margin-top:8px;">アカウントの他の投稿をここに追加できます。</p>
       </div>
 
@@ -444,6 +532,5 @@
   <footer>
     <p>&copy; 2025 ラスターマシナリー. All rights reserved.</p>
   </footer>
-  <script async defer src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
