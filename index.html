@@ -111,12 +111,19 @@
       display:flex; gap:1vw; align-items:flex-start;
       min-height: 120px;
     }
-    .service-img {
-      width:10vw; min-width:110px; height:auto;
-      border-radius:0.7vw; object-fit:cover;
-      background:#eee;
-      max-height: 160px;
-      box-shadow: 0 2px 10px rgba(80,80,80,0.06);
+    .service-img, .service-stamp {
+      width:2.7em; min-width:2.2em; max-width:3em;
+      height:2.7em; min-height:2.2em; max-height:3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size:2.4em;
+      margin-right:14px;
+      flex-shrink: 0;
+      background: none;
+      border-radius: 0.7vw;
+      box-shadow: none;
+      object-fit: contain;
     }
     .service-text { flex:1; }
     .contact {
@@ -227,7 +234,7 @@
       .page {padding: 2vw 1vw 0 1vw;}
       .repair-table th, .repair-table td { font-size:0.9em; padding:7px 2px;}
       .repair-table {font-size:0.95em; min-width:540px;}
-      .service-img { width:27vw; min-width:70px; max-width:120px;}
+      .service-img, .service-stamp { width:2em; min-width:2em; max-width:2.4em; font-size:2em;}
       .card {padding:3vw 2vw;}
       header .header-inner{flex-direction:column;}
       header img {max-width:150px;}
@@ -330,7 +337,8 @@
         <h2>主なサービス</h2>
         <ul class="service-list">
           <li>
-            <img src="https://files.oaiusercontent.com/file-68b922b1-15ef-4e8e-bf6a-ddd3a6b076a9/8e5f7e7a-0197-41a2-91b6-2e0a0e715d8b.png" alt="修理・メンテナンス" class="service-img">
+            <!-- かわいいスタンプ（🔧）-->
+            <span class="service-stamp">🔧</span>
             <div class="service-text">
               <strong>修理・メンテナンス</strong>
               <p style="margin:6px 0 0 0;">
@@ -339,7 +347,8 @@
             </div>
           </li>
           <li>
-            <img src="./images/service1.jpg" alt="工作機械・機械販売" class="service-img">
+            <!-- かわいいスタンプ（🤖）-->
+            <span class="service-stamp">🤖</span>
             <div class="service-text">
               <strong>工作機械・機械販売</strong>
               <p style="margin:6px 0 0 0;">
@@ -348,10 +357,13 @@
             </div>
           </li>
           <li>
-            <img src="./images/service3.jpg" alt="マッスルスーツ" class="service-img">
+            <!-- かわいいスタンプ（💪）-->
+            <span class="service-stamp">💪</span>
             <div class="service-text">
               <strong>マッスルスーツ</strong>
-              <p style="margin:6px 0 0 0;">作業の効率化をサポートします。導入相談・販売・保守まで対応。</p>
+              <p style="margin:6px 0 0 0;">
+                作業の効率化をサポートします。導入相談・販売・保守まで対応。
+              </p>
             </div>
           </li>
         </ul>
