@@ -117,19 +117,20 @@
     /* 修理実績表 */
     .repair-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
+      border-collapse: collapse;
       background: #fafdff;
       font-size: 1.04em;
       box-shadow: 0 2px 10px rgba(50,80,120,0.03);
       margin-bottom: 4px;
       min-width: 700px;
+      table-layout: fixed;
     }
     .repair-table th, .repair-table td {
       border: 1.3px solid #e0e7ef;
       padding: 10px 8px;
       text-align: center;
       vertical-align: middle;
+      word-break: break-all;
     }
     .repair-table th {
       background: #e9f3fb;
@@ -151,36 +152,35 @@
     }
     .repair-table td:nth-child(5) { color: #c0392b; }
     .repair-table td:nth-child(6) { color: #2274a5; }
+    .repair-table th, .repair-table td {
+      width: 16.66%;
+    }
     /* --- インスタリール埋め込みサイズ調整 --- */
     .reel-wrapper {
       max-width: 360px;
       margin: 0 auto;
       width: 95vw;
     }
-    .reel-wrapper blockquote.instagram-media {
-      width: 100% !important;
-      min-width: 0 !important;
-      max-width: 360px !important;
-      margin: 0 auto !important;
-      height: 440px !important;
-      overflow: hidden;
-      box-sizing: border-box;
+    .instagram-embed-full {
+      width: 100vw;
+      max-width: 100vw;
+      height: 56.25vw;
+      min-height: 240px;
+      max-height: 80vh;
+      margin: 0 auto;
+      display: block;
+      border: none;
       border-radius: 14px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      padding: 0 !important;
       background: #fff;
     }
     @media (max-width:1000px) {
       .page { flex-direction: column; gap:0; }
       aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw;}
       .repair-table {font-size:0.99em;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        max-width: 99vw !important;
-        width: 99vw !important;
-        min-width: 0 !important;
-        height: 58vw !important;
-        min-height: 260px !important;
+      .instagram-embed-full {
+        height: 58vw;
+        min-height: 200px;
         border-radius: 10px;
       }
     }
@@ -192,23 +192,18 @@
       header .header-inner{flex-direction:column;}
       header img {max-width:150px;}
       header h1 {font-size:1.3em;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        max-width: 100vw !important;
-        width: 100vw !important;
-        min-width: 0 !important;
-        height: 60vw !important;
-        min-height: 180px !important;
+      .instagram-embed-full {
+        height: 60vw;
+        min-height: 140px;
         border-radius: 6px;
       }
     }
     @media (max-width:500px){
       .repair-table th, .repair-table td { font-size:0.89em; padding:5px 1px;}
       .repair-table {min-width:420px;}
-      .reel-wrapper,
-      .reel-wrapper blockquote.instagram-media {
-        height: 56vw !important;
-        min-height: 120px !important;
+      .instagram-embed-full {
+        height: 56vw;
+        min-height: 100px;
       }
     }
   </style>
@@ -229,15 +224,18 @@
     <main>
       <section class="hero card">
         <h2>最新CM（リール）</h2>
-        <div class="reel-wrapper insta-embed">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DLVA_KhAlHj/"
-            data-instgrm-version="14"
-            style="background:#fff; border:0; margin:0 auto; width:100%;">
-            <div style="padding:8px 0;">
-              <a href="https://www.instagram.com/reel/DLVA_KhAlHj/" target="_blank" rel="noopener noreferrer">Instagramでリールを表示</a>
-            </div>
-          </blockquote>
+        <!-- Instagramリールを画面幅いっぱいにiframeで埋め込み -->
+        <div class="reel-wrapper">
+          <iframe 
+            class="instagram-embed-full"
+            src="https://www.instagram.com/reel/DLVA_KhAlHj/embed/"
+            allowtransparency="true" 
+            allowfullscreen="true"
+            scrolling="no"
+            frameborder="0"
+            title="Instagram Reel"
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
 
@@ -255,7 +253,6 @@
         <h2>主なサービス</h2>
         <ul class="service-list">
           <li>
-            <!-- 修理・メンテナンス画像をImage 1に差し替え -->
             <img src="https://files.oaiusercontent.com/file-68b922b1-15ef-4e8e-bf6a-ddd3a6b076a9/8e5f7e7a-0197-41a2-91b6-2e0a0e715d8b.png" alt="修理・メンテナンス" class="service-img">
             <div class="service-text">
               <strong>修理・メンテナンス</strong>
@@ -419,14 +416,7 @@
 
       <div class="card">
         <h2>最新投稿</h2>
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DLVA_KhAlHj/"
-          data-instgrm-version="14"
-          style="background:#fff; border:0; margin:0 auto; width:100%;">
-          <div style="padding:8px 0;">
-            <a href="https://www.instagram.com/reel/DLVA_KhAlHj/" target="_blank" rel="noopener noreferrer">Instagramでリールを表示</a>
-          </div>
-        </blockquote>
+        <!-- サイドバーのInstagramリール埋め込みは削除しました -->
         <p style="font-size:0.9rem; color:#666; margin-top:8px;">アカウントの他の投稿をここに追加できます。</p>
       </div>
 
@@ -444,6 +434,5 @@
   <footer>
     <p>&copy; 2025 ラスターマシナリー. All rights reserved.</p>
   </footer>
-  <script async defer src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
