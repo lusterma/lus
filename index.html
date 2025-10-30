@@ -50,6 +50,20 @@
     header h1 {
       margin: 0; font-size:2.5vw; color: #fff;
       min-width: 240px;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+    }
+    .h1-image {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.8vw;
+      width: 2.7em;
+      height: 2.7em;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(30,30,30,0.10);
+      background: #eee;
     }
     .catchphrase {
       margin: 6px 0 0 0;
@@ -242,6 +256,7 @@
       .reel-wrapper { max-width: 98vw; border-radius: 8px;}
       .instagram-embed-full { min-height: 140px; }
       aside.sidebar {padding-bottom: 24px;}
+      .h1-image { width: 2em; height: 2em; }
     }
     @media (max-width:500px){
       .repair-table th, .repair-table td { font-size:0.89em; padding:5px 1px;}
@@ -298,7 +313,10 @@
     <div class="header-inner">
       <img src="./images/logo.png" alt="ラスターマシナリー ロゴ" />
       <div>
-        <h1>ラスターマシナリー (Luster Machinery)</h1>
+        <h1>
+          ラスターマシナリー (Luster Machinery)
+          <img src="./images/sya2.jpeg" alt="sya2" class="h1-image" />
+        </h1>
         <div class="catchphrase">全国現場出張対応是非ご相談ください</div>
         <p style="margin:4px 0 0 0; color:#dfe9ef;">中古工作機械の販売・修理で製造業をサポート</p>
       </div>
@@ -340,7 +358,6 @@
         <h2>主なサービス</h2>
         <ul class="service-list">
           <li>
-            <!-- かわいいスタンプ（🔧）-->
             <span class="service-stamp">🔧</span>
             <div class="service-text">
               <strong>修理・メンテナンス</strong>
@@ -351,7 +368,6 @@
             </div>
           </li>
           <li>
-            <!-- かわいいスタンプ（🤖）-->
             <span class="service-stamp">🤖</span>
             <div class="service-text">
               <strong>工作機械・機械販売</strong>
@@ -361,7 +377,6 @@
             </div>
           </li>
           <li>
-            <!-- かわいいスタンプ（💪）-->
             <span class="service-stamp">💪</span>
             <div class="service-text">
               <strong>マッスルスーツ</strong>
@@ -494,7 +509,6 @@
     </main>
 
     <aside class="sidebar">
-      <!-- はてなブログ新着記事リスト -->
       <div class="card">
         <a href="https://luster55.hateblo.jp/" class="blog-link" target="_blank" rel="noopener noreferrer">▶ キカイブログ（はてなブログ）</a>
         <ul class="blog-list">
