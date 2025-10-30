@@ -502,12 +502,6 @@
         </ul>
       </div>
       <div class="card">
-        <a href="https://www.jp.usedmachinery.bz/members/general_view/881" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;">
-          <img src="https://www.jp.usedmachinery.bz/img/common/logo.png" alt="中古機械情報百貨店" style="max-width:80%;height:auto;margin:0 auto 6px auto;display:block;">
-          <span style="display:block;font-weight:bold;color:#2c3e50;font-size:1.05em;margin-top:4px;">中古機械情報百貨店<br>（中古機械情報）</span>
-        </a>
-      </div>
-      <div class="card">
         <h2>Instagram</h2>
         <div class="insta-profile">
           <img class="avatar" src="./images/insta-avatar.jpg" alt="luster_machinery">
@@ -517,6 +511,11 @@
             <a class="follow-btn" href="https://www.instagram.com/luster_machinery/" target="_blank" rel="noopener noreferrer">Instagramを開く</a>
           </div>
         </div>
+      </div>
+
+      <div class="card">
+        <h2>最新投稿</h2>
+        <p style="font-size:0.9rem; color:#666; margin-top:8px;">アカウントの他の投稿をここに追加できます。</p>
       </div>
 
       <div class="card">
