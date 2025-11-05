@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="description" content="広島福山発の工作機械修理専門会社　ラスターマシナリー　中古機械販売・全国出張対応・福山市内御見積り無料　COSEN">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ラスターマシナリー | 工作機械修理専門 | 中古機械販売</title>
-  <meta name="description" content="ラスターマシナリーは広島県福山市の工作機械修理専門業者。全国対応・現場出張OK。中古機械販売・マッスルスーツ導入[...]">
-  <meta name="keywords" content="工作機械,修理,中古機械,旋盤,NC修理,福山市,全国出張,産業機械,メンテナンス,ラスターマシナリー">
-  <meta property="og:title" content="ラスターマシナリー | 工作機械修理専門 | 全国現場出張・中古機械販売">
-  <meta property="og:description" content="広島県福山市の工作機械修理専門業者。全国対応・現場出張OK。中古機械販売・マッスルスーツ導入もご相談ください。">
+  <title>工作機械修理の専門家 | 工作機械修理 福山 全国出張修理対応 | ラスターマシナリー</title>
+
+  <!-- Primary description for SEO (replaces older/truncated descriptions) -->
+  <meta name="description" content="福山市・工作機械の故障・不具合・全国出張修理で即解決。COSENバンドソー専門、福山市内無料見積もり。福山発の信頼サービス。工作機械修理の事例を詳しく解説。">
+  <meta name="keywords" content="金属切削加工,機械修理,工作機械,修理,中古機械,旋盤,NC,汎用機,古い機械,福山市,全国出張,産業機械,メンテナンス,保守,ラスターマシナリー">
+
+  <!-- Open Graph（SNS共有用） -->
+  <meta property="og:title" content="工作機械修理の専門家 | ラスターマシナリー">
+  <meta property="og:description" content="全国出張対応の工作機械修理・中古販売。COSENバンドソー保守で現場をサポート。">
+  <meta property="og:image" content="https://lusterma.github.io/lus/images/representative-photo.jpg">
+  <meta property="og:url" content="https://lusterma.github.io/lus/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kikai.work/">
-  <meta property="og:image" content="https://kikai.work/images/ogp.png">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://kikai.work/">
+
+  <link rel="canonical" href="https://lusterma.github.io/lus/">
   <link rel="icon" href="favicon.ico">
 
+  <!-- Schema.org (LocalBusiness) for リッチスニペット -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ラスターマシナリー",
+    "description": "工作機械修理・中古販売専門。全国出張対応。COSENバンドソーの保守・修理に強みがあります。広島県福山市より",
+    "url": "https://lusterma.github.io/lus/",
+    "telephone": "+81-80-3880-4695",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "沼隈町常石 2743",
+      "addressLocality": "福山市",
+      "addressRegion": "広島県",
+      "addressCountry": "JP"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "¥",
+    "sameAs": [
+      "https://www.facebook.com/luster50m/",
+      "https://www.instagram.com/luster_machinery/"
+    ]
+  }
+  </script>
+
   <!-- セキュリティ強化: CSP, XSS, Referrer-Policy, X-Content-Type-Options 等 -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.jp.usedmachinery.bz https://www.cosen.com; frame-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://lusterma.github.io https://www.cosen.com https://www.jp.usedmachinery.bz; connect-src 'self'; frame-src https://translate.google.com; object-src 'none';">
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -122,6 +150,9 @@
       box-shadow: 0 2px 6px rgba(30,30,30,0.10);
       background: #eee;
       overflow: hidden;
+      /* 横に少し広げて見た目を合わせる（レイアウトサイズは維持） */
+      transform: scaleX(1.12);
+      transform-origin: center;
     }
     .h1-image {
       display: inline-block;
@@ -200,6 +231,32 @@
       padding-bottom:0.4vw;
       font-size:1.3em;
     }
+
+    /* 在庫テーブル（CMの上に表示） */
+    .inventory-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fffafb;
+      box-shadow: 0 2px 8px rgba(30,40,60,0.03);
+      font-size: 1em;
+    }
+    .inventory-table th, .inventory-table td {
+      border: 1px solid #e0e7ef;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .inventory-table th {
+      background: #eef8ff;
+      font-weight: 700;
+      color: #234;
+    }
+    .inventory-note {
+      text-align: center;
+      margin-top: 10px;
+    }
+
     ul.service-list { list-style:none; padding:0; margin:0; display:grid; gap:1vw; }
     ul.service-list li {
       background:var(--muted);
@@ -323,6 +380,7 @@
       main { max-width: 100vw;}
       .reel-wrapper { max-width: 88vw; }
       .video-embed-full { min-height: 140px; }
+      .inventory-table { min-width: 520px; }
     }
     @media (max-width:700px){
       .page {padding: 2vw 1vw 0 1vw;}
@@ -336,7 +394,7 @@
       .video-embed-full { min-height: 80px; }
       aside.sidebar {padding-bottom: 24px;}
       .h1-image { width: 2em; height: 2em; }
-      .h1-sinbol { width: 2em; height: 2em; }
+      .h1-sinbol { width: 2em; height: 2em; transform: scaleX(1.10); }
       .free-estimate { font-size: 1em; padding: 5px 12px; }
     }
     @media (max-width:500px){
@@ -403,9 +461,13 @@
   <a id="top"></a>
   <header>
     <div class="header-inner">
-      <!-- <img src="./images/logo.png" alt="ラスターマシナリー ロゴ" /> <-- スマホトップ非表示画像 削除 -->
+      <!-- SEO向けのH1を追加（キーワード中心） -->
       <div style="width:100%;">
-        <div class="company-highlight">
+        <h1 style="margin:0 0 10px 0; font-size:1.15em; color:#fff; font-weight:800; text-align:center;">
+          工作機械修理の専門家 | 工作機械故障・修理・出張・福山市内御見積り無料 | ラスターマシナリー
+        </h1>
+
+        <div class="company-highlight" aria-hidden="true">
           <img src="./images/sinbol1.jpeg" alt="シンボル" class="h1-sinbol" style="margin-left:-0.7em;vertical-align:middle;" />
           ラスターマシナリー（Luster Machinery）
           <img src="./images/syasyou2.jpeg" alt="代表写真" class="h1-image" style="margin-right:-0.7em;vertical-align:middle;" />
@@ -419,6 +481,47 @@
 
   <div class="page">
     <main>
+      <!-- 在庫情報をCMの上に追加 -->
+      <section class="inventory card" id="inventory">
+        <h2>中古機械在庫情報（最新）</h2>
+        <div style="overflow-x:auto;">
+          <table class="inventory-table" aria-describedby="inventory-note">
+            <thead>
+              <tr>
+                <th>状態</th>
+                <th>機種</th>
+                <th>型式</th>
+                <th>所在地</th>
+                <th>備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>入荷予定</td>
+                <td>3.7kwレシプロコンプレッサー</td>
+                <td>日立</td>
+                <td>福山</td>
+                <td>準備中</td>
+              </tr>
+              <tr>
+                <td>入荷予定</td>
+                <td>汎用旋盤</td>
+                <td>TAL-460</td>
+                <td>広島</td>
+                <td>準備中</td>
+              </tr>
+              <!-- 実在庫はここに追加してください -->
+            </tbody>
+          </table>
+        </div>
+        <p id="inventory-note" class="inventory-note">
+          只今準備中・在庫・価格・写真はお問い合わせください。機械探します。
+        </p>
+        <p style="text-align:center; margin-top:8px;">
+          <a class="btn" href="mailto:info@kikai.work?subject=在庫確認">在庫を確認・見積もり依頼</a>
+        </p>
+      </section>
+
       <section class="hero card">
         <h2>CM</h2>
         <div class="reel-wrapper">
@@ -443,13 +546,14 @@
         <h2>会社概要</h2>
         <p><strong>会社名：</strong>ラスターマシナリー（Luster Machinery）</p>
         <p><strong>代表：</strong>田中 健太郎</p>
-        <p><strong>所在地：</strong>広島県福山市沼隈町常石 2743</p>
+        <p><strong>所在地：</strong>広島県福山市沼隈町常石</p>
         <p><strong>設立：</strong>2019年10月</p>
-        <p><strong>事業内容：</strong>工作機械修理、出張修理・メンテナンス、新品中古機械販売、マッスルスーツ販売および保守</p>
+        <p><strong>事業内容：</strong>工作機械修理、出張修理・保守メンテナンス、新品中古機械販売、マッスルスーツ販売保守</p>
         <!-- ここに追記 -->
         <p style="font-weight:bold; color:#2274a5; margin-top:7px;">
-          台湾COSEN社にてバンドソーの仕事を経験して設立致しました。<br>
-          COSEN社の機械のご相談賜ります。COSEN専属修理士。
+          工作機械の営業・工作機械の修理・主に汎用機。
+          台湾COSEN社にてバンドソーの組み立てを経て設立致しました。<br>
+          COSEN社の機械のご相談賜ります。COSEN専属整備士。
         </p>
         <!-- 追記ここまで -->
         <p><strong>連絡先：</strong><a href="tel:080-3880-4695">080-3880-4695</a> / <a href="mailto:info@kikai.work">info@kikai.work</a></p>
@@ -467,6 +571,8 @@
               <p style="margin:6px 0 0 0;">
                 古い機械、汎用工作機械の修理実績多数あります。なるべく早く—基本的に1週間以内での訪問解決を目指します。
                 現場へ出張いたします。
+                福山市内であれば御見積り無料現地へ訪問します。作業は別途。
+                遠方の方写真等でも見極め致します。現地へは移動費が発生いたします。
               </p>
             </div>
           </li>
@@ -476,6 +582,7 @@
               <strong>工作機械・機械販売</strong>
               <p style="margin:6px 0 0 0;">
                 メーカー問わず、お客様に最適な機械を検討・ご提案します。新品でも中古でも対応します。
+                近日中古機械入荷予定。
               </p>
             </div>
           </li>
