@@ -6,8 +6,8 @@
   <title>工作機械修理の専門家 | 全国出張対応（広島・岡山・山口・鳥取・島根）| ラスターマシナリー</title>
 
   <!-- Primary description for SEO (replaces older/truncated descriptions) -->
-  <meta name="description" content="広島県福山市より全国出張対応。中国地方（広島・岡山・山口・鳥取・島根）での工作機械修理・中古販売。COSENバンドソー整備士。福山市内無料見積。">
-  <meta name="keywords" content="金属切削加工,機械修理,工作機械,修理,中古機械,旋盤,NC,汎用機,古い機械,福山市,広島,岡山,山口,鳥取,島根,中国地方,全国出張,産業機械,メンテナンス,保守,ラスターマシナリー">
+  <meta name="description" content="広島県福山市より全国出張対応。中国地方（広島・岡山・山口・鳥取・島根）での工作機械修理・中古販売。COSENバンドソー保守専門。">
+  <meta name="keywords" content="金属切削加工,機械修理,工作機械,修理,中古機械,旋盤,NC,汎用機,古い機械,福山市,広島,岡山,山口,鳥取,島根,中国地方,全国出張">
 
   <!-- Open Graph（SNS共有用） -->
   <meta property="og:title" content="工作機械修理の専門家 | ラスターマシナリー">
@@ -18,6 +18,11 @@
 
   <link rel="canonical" href="https://www.kikai.work/">
   <link rel="icon" href="favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Schema.org (LocalBusiness) for リッチスニペット -->
   <script type="application/ld+json">
@@ -28,16 +33,16 @@
     "description": "工作機械修理専門・販売買い取り。全国出張対応。COSENバンドソーの保守・修理に強みがあります。広島県福山市発",
     "url": "https://www.kikai.work/",
     "priceRange": "¥",
-"areaServed": [
-  {"@type": "City", "name": "広島市"},
-  {"@type": "City", "name": "福山市"},
-  {"@type": "City", "name": "岡山市"},
-  {"@type": "City", "name": "倉敷市"},
-  {"@type": "City", "name": "山口市"},
-  {"@type": "City", "name": "下関市"},
-  {"@type": "City", "name": "鳥取市"},
-  {"@type": "City", "name": "松江市"}
-],
+    "areaServed": [
+      {"@type": "City", "name": "広島市"},
+      {"@type": "City", "name": "福山市"},
+      {"@type": "City", "name": "岡山市"},
+      {"@type": "City", "name": "倉敷市"},
+      {"@type": "City", "name": "山口市"},
+      {"@type": "City", "name": "下関市"},
+      {"@type": "City", "name": "鳥取市"},
+      {"@type": "City", "name": "松江市"}
+    ],
     "telephone": "+81-80-3880-4695",
     "address": {
       "@type": "PostalAddress",
@@ -46,7 +51,7 @@
       "addressRegion": "広島県",
       "addressCountry": "JP"
     },
-    "openingHours": "Mo-Fr 09:00-18:00"
+    "openingHours": "Mo-Fr 09:00-18:00",
     "sameAs": [
       "https://www.facebook.com/luster50m/",
       "https://www.instagram.com/luster_machinery/"
@@ -55,7 +60,7 @@
   </script>
 
   <!-- セキュリティ強化: CSP, XSS, Referrer-Policy, X-Content-Type-Options 等 -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://wwww.kikai.work https://www.cosen.com https://www.jp.usedmachinery.bz; connect-src 'self'; frame-src https://translate.google.com; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://translate.google.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -77,423 +82,580 @@
 
   <style>
     :root{
-      --primary:#2c3e50;
-      --accent:#3498db;
-      --muted:#ecf0f1;
-      --green:#27ae60;
-      --card-bg:#ffffff;
+      --primary: #1a3a52;
+      --primary-light: #2d5573;
+      --accent: #0066cc;
+      --accent-hover: #0052a3;
+      --success: #0d8f4a;
+      --success-light: #e8f5ed;
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
     }
-    html, body {
-      margin: 0; padding: 0;
-      background-color: #f4f4f4; color: #333;
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      font-size: 18px;
+    
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+    }
+    
+    html, body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
       width: 100vw;
       min-width: 320px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    *, *::before, *::after {
-      box-sizing: inherit;
-    }
+    
+    /* ヘッダー */
     header {
-      background-color: var(--primary);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
-      padding: 2vw 1vw;
-      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    
     header .header-inner {
-      width: 100%;
-      max-width: none;
+      max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 2vw;
-      justify-content: center;
-      flex-wrap: wrap;
     }
-    /* header img 削除（2025/10/31 指示により） */
+    
     .company-highlight {
       text-align: center;
-      font-size: 3vw;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
       font-weight: 900;
-      color: #ffe27b;
-      letter-spacing: 0.08em;
-      text-shadow:
-        0 2px 16px rgba(30,30,0,0.18),
-        0 1px 2px rgba(0,0,0,0.28),
-        0 0 0.7vw #3498db;
-      background: linear-gradient(90deg,#fffcd5 30%,#ffe27b 50%,#fffcd5 100%);
-      border-radius: 16px;
-      margin: 0 auto 11px auto;
-      padding: 13px 0 13px 0;
-      max-width: 100vw;
-      border: 2.5px solid #ffe27b;
-      box-shadow: 0 4px 30px rgba(90,80,10,0.05);
-      transition: background 0.2s, color 0.2s;
-      font-family: 'Segoe UI', 'Arial Black', Arial, sans-serif;
-      line-height: 1.18;
-    }
-    @media (max-width:700px){
-      .company-highlight { font-size: 1.65em; padding: 7px 0; }
-    }
-    header h1 {
-      margin: 0; font-size:2.5vw; color: #fff;
-      min-width: 240px;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+      margin: 0 auto 1rem;
+      padding: 1.5rem 1rem;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
       display: flex;
       align-items: center;
-      gap: 1vw;
       justify-content: center;
-      text-align: center;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    .h1-sinbol {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 0.8vw;
-      width: 2.7em;
-      height: 2.7em;
-      border-radius: 16%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 2px 6px rgba(30,30,30,0.10);
-      background: #eee;
-      overflow: hidden;
-      /* 横に少し広げて見た目を合わせる（レイアウトサイズは維持） */
-      transform: scaleX(1.12);
-      transform-origin: center;
-    }
-    .h1-image {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 0.8vw;
-      width: 2.7em;
-      height: 2.7em;
+    
+    .h1-sinbol, .h1-image {
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 2px 6px rgba(30,30,30,0.10);
-      background: #eee;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .catchphrase {
-      margin: 6px 0 0 0;
+    
+    .h1-sinbol {
+      border-radius: 12px;
+    }
+    
+    header h1 {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
       font-weight: 700;
-      font-size: 1.15em;
-      color: #ffe27b;
-      letter-spacing: 0.03em;
-      text-shadow: 0 2px 8px rgba(40,40,40,0.12);
+      color: rgba(255,255,255,0.95);
+      text-align: center;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
     }
-    .free-estimate {
-      margin: 10px auto 0 auto;
-      font-weight: bold;
-      color: #27ae60;
-      background: #e9ffe4;
-      display: inline-block;
-      padding: 6px 16px;
-      border-radius: 24px;
-      font-size: 1.15em;
-      box-shadow: 0 1px 6px rgba(50,120,80,0.04);
+    
+    .catchphrase {
+      text-align: center;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 1rem 0;
       letter-spacing: 0.05em;
     }
+    
+    .free-estimate {
+      display: inline-block;
+      background: var(--success);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 12px rgba(13, 143, 74, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .free-estimate:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(13, 143, 74, 0.4);
+    }
+    
+    /* レイアウト */
     .page {
       display: flex;
       flex-direction: row;
-      gap: 2vw;
-      align-items: flex-start;
-      min-height: 80vh;
-      box-sizing: border-box;
-      padding: 2vw 2vw 0 2vw;
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
-      width: 100%;
-      position: relative;
+      padding: 2rem 1rem;
     }
+    
     main {
-      flex: 1 1 0%;
+      flex: 1;
       min-width: 0;
-      max-width: 740px;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5vw;
     }
+    
     aside.sidebar {
-      width: 320px;
-      min-width: 240px;
-      max-width: 360px;
-      position: relative;
-      z-index: 2;
-      flex: 0 0 320px;
+      width: 340px;
+      flex-shrink: 0;
     }
+    
+    /* カード */
     .card {
-      background: var(--card-bg);
-      padding: 1.5vw 1.5vw 1.2vw 1.5vw;
-      border-radius: 1vw;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      margin-bottom: 1.5vw;
-      box-sizing: border-box;
-      overflow: hidden;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
     }
+    
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+    
     h2 {
-      color: #34495e; margin-top:0;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom:0.4vw;
-      font-size:1.3em;
+      color: var(--primary);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 1.5rem 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--accent);
+      position: relative;
     }
-
-    /* 在庫テーブル（CMの上に表示） */
-    .inventory-table {
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--success);
+    }
+    
+    /* テーブル */
+    .inventory-table, .repair-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 620px;
-      background: #fffafb;
-      box-shadow: 0 2px 8px rgba(30,40,60,0.03);
-      font-size: 1em;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.95rem;
     }
-    .inventory-table th, .inventory-table td {
-      border: 1px solid #e0e7ef;
-      padding: 8px 10px;
+    
+    .inventory-table th, .inventory-table td,
+    .repair-table th, .repair-table td {
+      padding: 1rem;
       text-align: left;
-      vertical-align: middle;
+      border-bottom: 1px solid var(--border-light);
     }
-    .inventory-table th {
-      background: #eef8ff;
+    
+    .inventory-table th, .repair-table th {
+      background: linear-gradient(to bottom, #f7fafc, #edf2f7);
+      color: var(--text-primary);
       font-weight: 700;
-      color: #234;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
     }
+    
+    .inventory-table tr:hover td,
+    .repair-table tr:hover td {
+      background: #f8fafc;
+    }
+    
     .inventory-note {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
     }
-
-    ul.service-list { list-style:none; padding:0; margin:0; display:grid; gap:1vw; }
+    
+    /* サービスリスト */
+    ul.service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 1.5rem;
+    }
+    
     ul.service-list li {
-      background:var(--muted);
-      padding:1vw; border-radius:0.7vw;
-      display:flex; gap:1vw; align-items:flex-start;
-      min-height: 120px;
+      background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
     }
-    .service-img, .service-stamp {
-      width:2.7em; min-width:2.2em; max-width:3em;
-      height:2.7em; min-height:2.2em; max-height:3em;
+    
+    ul.service-list li:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+    
+    .service-icon {
+      width: 4rem;
+      height: 4rem;
+      min-width: 4rem;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size:2.4em;
-      margin-right:14px;
-      flex-shrink: 0;
-      background: none;
-      border-radius: 0.7vw;
-      box-shadow: none;
-      object-fit: contain;
-    }
-    .service-text { flex:1; }
-    .contact {
-      background-color: #e8f5e8;
-      padding: 1vw 1vw 1vw 1vw;
-      border-radius: 1vw;
-      margin: 2vw 0;
-      text-align: center;
-    }
-    .contact a.btn {
-      background: var(--green); color: white;
-      padding: 0.7vw 1.2vw;
-      text-decoration:none;
-      border-radius:0.5vw;
-      display:inline-block;
-      font-size:1.1em;
-      margin-top:0.5vw;
-    }
-    .hidden-honeypot { display:none !important; }
-    footer {
-      text-align: center;
-      padding: 2vw 0 1vw 0;
-      background-color: var(--primary);
       color: white;
-      margin-top: 1vw;
-      font-size:1em;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .repair-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fafdff;
-      font-size: 1.04em;
-      box-shadow: 0 2px 10px rgba(50,80,120,0.03);
-      margin-bottom: 4px;
-      min-width: 700px;
-      table-layout: fixed;
-    }
-    .repair-table th, .repair-table td {
-      border: 1.3px solid #e0e7ef;
-      padding: 10px 8px;
-      text-align: center;
-      vertical-align: middle;
-      word-break: break-all;
-      width: 16.66%;
-    }
-    .repair-table th {
-      background: #e9f3fb;
-      color: #234;
+      font-size: 2rem;
       font-weight: 700;
-      font-size: 1.01em;
-      letter-spacing: 0.03em;
-      position: sticky;
-      top: 0;
-      z-index: 2;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
     }
-    .repair-table td {
-      background: #fff;
-      color: #223;
-      font-weight: 500;
+    
+    .service-text strong {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
     }
-    .repair-table tr:nth-child(even) td {
-      background: #f5fafe;
+    
+    .service-text p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
     }
-    .repair-table td:nth-child(5) { color: #c0392b; }
-    .repair-table td:nth-child(6) { color: #2274a5; }
-
+    
+    /* ボタン */
+    .btn, .contact a.btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    
+    .btn:hover, .contact a.btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+      text-decoration: none;
+    }
+    
+    /* お問い合わせセクション */
+    .contact {
+      background: linear-gradient(135deg, var(--success-light) 0%, #f0fdf4 100%);
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid #d1fae5;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .contact h2 {
+      border-bottom: none;
+    }
+    
+    .contact h2::after {
+      display: none;
+    }
+    
+    .contact p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* 動画 */
     .reel-wrapper {
       width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 100%;
       aspect-ratio: 16/9;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      background: #000;
+      border-radius: 12px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: var(--shadow-lg);
     }
+    
     .video-embed-full {
       width: 100%;
       height: 100%;
-      min-height: 180px;
       border: none;
-      background: #222;
       display: block;
-      aspect-ratio: 16/9;
-      object-fit: contain;
     }
-    @media (max-width:1200px) {
-      .page { max-width: 98vw; }
-      main { max-width: 100vw; }
-      aside.sidebar { max-width: 36vw; }
-      .reel-wrapper { max-width: 38vw; }
-    }
-    @media (max-width:1000px) {
-      .page { flex-direction: column; gap:0; max-width:100vw;}
-      aside.sidebar{ width:100%; max-width:100%; min-width:0; margin-top:2vw; flex: none;}
-      main { max-width: 100vw;}
-      .reel-wrapper { max-width: 88vw; }
-      .video-embed-full { min-height: 140px; }
-      .inventory-table { min-width: 520px; }
-    }
-    @media (max-width:700px){
-      .page {padding: 2vw 1vw 0 1vw;}
-      .repair-table th, .repair-table td { font-size:0.9em; padding:7px 2px;}
-      .repair-table {font-size:0.95em; min-width:540px;}
-      .service-img, .service-stamp { width:2em; min-width:2em; max-width:2.4em; font-size:2em;}
-      .card {padding:3vw 2vw;}
-      header .header-inner{flex-direction:column;}
-      header h1 {font-size:1.3em;}
-      .reel-wrapper { max-width: 98vw; border-radius: 8px;}
-      .video-embed-full { min-height: 80px; }
-      aside.sidebar {padding-bottom: 24px;}
-      .h1-image { width: 2em; height: 2em; }
-      .h1-sinbol { width: 2em; height: 2em; transform: scaleX(1.10); }
-      .free-estimate { font-size: 1em; padding: 5px 12px; }
-    }
-    @media (max-width:500px){
-      .repair-table th, .repair-table td { font-size:0.89em; padding:5px 1px;}
-      .repair-table {min-width:420px;}
-      .reel-wrapper { border-radius: 4px;}
-      .video-embed-full { min-height: 50px; }
-    }
+    
+    /* サイドバー */
     .sidebar .card {
-      margin-bottom: 1.5vw;
-      padding: 1vw 1vw 1vw 1vw;
+      padding: 1.5rem;
     }
+    
     .insta-profile {
-      display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
+    
     .insta-profile .avatar {
-      width: 52px; height: 52px; border-radius: 50%; object-fit: cover; background: #eee;
-      border: 2px solid #ddd;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border-medium);
+      box-shadow: var(--shadow-sm);
     }
-    .sidebar .follow-btn {
-      display:inline-block; margin-top:0.3em; font-weight:600; color: #fff; background: var(--accent);
-      border-radius:4px; padding: 2px 10px; text-decoration:none; font-size: 0.97em;
-      box-shadow: 0 2px 8px rgba(50,80,200,0.08);
+    
+    .follow-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(135deg, #E1306C 0%, #C13584 100%);
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(225, 48, 108, 0.2);
     }
+    
+    .follow-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
+    }
+    
     .blog-list {
       list-style: none;
-      margin: 0 0 8px 0;
       padding: 0;
-      font-size: 1em;
+      margin: 0;
     }
+    
     .blog-list li {
-      margin: 0 0 4px 0;
-      padding: 0;
-      line-height: 1.3;
-      border-left: 3px solid var(--accent);
-      padding-left: 7px;
-      background: #f6fafd;
-      border-radius: 3px;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      border-left: 4px solid var(--accent);
+      background: #f8fafc;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
     }
+    
+    .blog-list li:hover {
+      background: #edf2f7;
+      border-left-color: var(--success);
+    }
+    
     .blog-link {
       display: block;
       font-weight: 700;
-      margin-bottom: 6px;
       color: var(--primary);
-      text-decoration: underline;
-      font-size: 1.05em;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      transition: color 0.2s ease;
     }
+    
+    .blog-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    
     .cosen-banner {
       display: block;
-      margin: 10px auto;
-      max-width: 220px;
+      margin: 1rem auto;
+      max-width: 200px;
       width: 100%;
       height: auto;
-      background: #fff;
+      background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(52, 152, 219, 0.08);
-      padding: 6px 0;
+      padding: 1rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+    
+    .cosen-banner:hover {
+      transform: scale(1.05);
+    }
+    
+    /* フッター */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      padding: 3rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+    
+    footer h3, footer h4 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    footer a {
+      color: #a7d8ff;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    address {
+      font-style: normal;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    /* レスポンシブ */
+    @media (max-width: 1000px) {
+      .page {
+        flex-direction: column;
+      }
+      
+      aside.sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .company-highlight {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+      }
+    }
+    
+    @media (max-width: 700px) {
+      header {
+        padding: 1.5rem 1rem;
+      }
+      
+      .page {
+        padding: 1rem;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .h1-sinbol, .h1-image {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      
+      ul.service-list li {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .service-icon {
+        margin: 0 auto;
+      }
+      
+      .inventory-table, .repair-table {
+        font-size: 0.85rem;
+      }
+      
+      .inventory-table th, .inventory-table td,
+      .repair-table th, .repair-table td {
+        padding: 0.75rem 0.5rem;
+      }
+    }
+    
+    .hidden-honeypot {
+      display: none !important;
+    }
+    
+    /* リンクスタイル */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+    
+    /* スクロールバー */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--bg-main);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-medium);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
     }
   </style>
 </head>
 <body>
   <!-- Google翻訳ツールバー設置 -->
-  <div id="google_translate_element" style="position:fixed;top:0;right:0;z-index:9999;background:#fff9;padding:2px 8px;border-radius:0 0 0 8px;"></div>
+  <div id="google_translate_element" style="position:fixed;top:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);padding:0.5rem 1rem;border-radius:0 0 0 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);"></div>
+  
   <a id="top"></a>
+  
   <header>
     <div class="header-inner">
-      <!-- SEO向けのH1を追加（キーワード中心） -->
-      <div style="width:100%;">
-        <h1 style="margin:0 0 10px 0; font-size:1.15em; color:#fff; font-weight:800; text-align:center;">
-          工作機械修理の専門家 | 工作機械故障・修理・出張・福山市内御見積り無料 | ラスターマシナリー
-        </h1>
-
-        <div class="company-highlight" aria-hidden="true">
-          <img src="./images/sinbol1.jpeg" alt="シンボル" class="h1-sinbol" style="margin-left:-0.7em;vertical-align:middle;" />
-          ラスターマシナリー（Luster Machinery）
-          <img src="./images/syasyou2.jpeg" alt="代表写真" class="h1-image" style="margin-right:-0.7em;vertical-align:middle;" />
-        </div>
-        <div class="catchphrase">全国出張対応是非ご相談ください。現場へ直行。</div>
-        <div class="free-estimate">福山市内御見積り無料</div>
-        <p style="margin:4px 0 0 0; color:#dfe9ef;">中古工作機械の販売・修理で製造業をサポート</p>
+      <h1>工作機械修理の専門家 | 工作機械故障・修理・出張・福山市内御見積り無料 | ラスターマシナリー</h1>
+      
+      <div class="company-highlight">
+        <img src="./images/sinbol1.jpeg" alt="シンボル" class="h1-sinbol" loading="lazy" />
+        <span>ラスターマシナリー</span>
+        <img src="./images/syasyou2.jpeg" alt="代表写真" class="h1-image" loading="lazy" />
       </div>
+      
+      <div class="catchphrase">全国出張対応 | 現場へ直行</div>
+      <div style="text-align:center;">
+        <span class="free-estimate">福山市内御見積り無料</span>
+      </div>
+      <p style="margin:1rem 0 0 0; color:rgba(255,255,255,0.9); text-align:center;">中古工作機械の販売・修理で製造業をサポート</p>
     </div>
   </header>
 
   <div class="page">
     <main>
-      <!-- 在庫情報をCMの上に追加 -->
+      <!-- 在庫情報 -->
       <section class="inventory card" id="inventory">
-        <h2>中古機械在庫情報（最新）</h2>
+        <h2>中古機械在庫情報</h2>
         <div style="overflow-x:auto;">
           <table class="inventory-table" aria-describedby="inventory-note">
             <thead>
@@ -507,99 +669,103 @@
             </thead>
             <tbody>
               <tr>
-                <td>絶賛販売中</td>
+                <td><strong style="color:var(--success);"></strong></td>
                 <td>汎用旋盤</td>
                 <td>TAL-460</td>
                 <td>広島</td>
                 <td>中古機械</td>
               </tr>
-              <!-- 実在庫はここに追加してください -->
             </tbody>
           </table>
         </div>
         <p id="inventory-note" class="inventory-note">
-        在庫・価格・写真はお問い合わせください。機械探します。
+          在庫・価格・写真はお問い合わせください。機械探します。
         </p>
-        <p style="text-align:center; margin-top:8px;">
+        <p style="text-align:center; margin-top:1.5rem;">
           <a class="btn" href="mailto:info@kikai.work?subject=在庫確認">在庫を確認・見積もり依頼</a>
         </p>
       </section>
 
+      <!-- CM動画 -->
       <section class="hero card">
-        <h2>CM</h2>
+        <h2>CM動画</h2>
         <div class="reel-wrapper">
           <video
             class="video-embed-full"
             src="videos/CM2.mp4"
             loading="lazy"
-            preload="none"
+            preload="metadata"
             muted
             playsinline
             autoplay
             controls
             poster=""
-            style="background:#222;"
           >
             お使いのブラウザは video タグに対応していません。
           </video>
         </div>
       </section>
-      <!-- 以降は元の内容を省略せず全て残す -->
+
+      <!-- 会社概要 -->
       <section class="card" id="company-overview">
         <h2>会社概要</h2>
-        <p><strong>会社名：</strong>ラスターマシナリー（Luster Machinery）</p>
-        <p><strong>代表：</strong>田中 健太郎</p>
-        <p><strong>所在地：</strong>広島県福山市沼隈町常石</p>
-        <p><strong>設立：</strong>2019年10月</p>
-        <p><strong>事業内容：</strong>工作機械修理、出張修理・保守メンテナンス、新品中古機械販売、マッスルスーツ販売保守</p>
-        <!-- ここに追記 -->
-        <p style="font-weight:bold; color:#2274a5; margin-top:7px;">
-          工作機械の営業・工作機械の修理・主に汎用機。
-          台湾COSEN社にてバンドソーの組み立てを経て設立致しました。<br>
-          COSEN社の機械のご相談賜ります。COSEN専属整備士。
-        </p>
-        <!-- 追記ここまで -->
-        <p><strong>連絡先：</strong><a href="tel:080-3880-4695">080-3880-4695</a> / <a href="mailto:info@kikai.work">info@kikai.work</a></p>
-        <p><strong>FAX：</strong>050-3588-2383</p>
-        <p><strong>インボイス登録番号：</strong>T7810709713142</p>
-        <p><strong>機械工具商：</strong>広島県公安委員会許可第731281900024</p>
+        <div style="display:grid;gap:1rem;">
+          <p><strong style="color:var(--primary);">会社名：</strong>ラスターマシナリー（Luster Machinery）</p>
+          <p><strong style="color:var(--primary);">代表：</strong>田中 健太郎</p>
+          <p><strong style="color:var(--primary);">所在地：</strong>広島県福山市沼隈町常石</p>
+          <p><strong style="color:var(--primary);">設立：</strong>2019年10月</p>
+          <p><strong style="color:var(--primary);">事業内容：</strong>工作機械修理、出張修理・保守メンテナンス、新品中古機械販売、マッスルスーツ販売保守</p>
+          <div style="background:var(--success-light);padding:1.5rem;border-radius:8px;border-left:4px solid var(--success);margin-top:1rem;">
+            <p style="font-weight:600; color:var(--primary); line-height:1.8;">
+              工作機械の営業・工作機械の修理・主に汎用機。<br>
+              台湾COSEN社にてバンドソーの組み立てを経て設立致しました。<br>
+              COSEN社の機械のご相談賜ります。<strong>COSEN専属整備士</strong>
+            </p>
+          </div>
+          <p><strong style="color:var(--primary);">連絡先：</strong><a href="tel:080-3880-4695" style="font-weight:700;">080-3880-4695</a> / <a href="mailto:info@kikai.work" style="font-weight:700;">info@kikai.work</a></p>
+          <p><strong style="color:var(--primary);">FAX：</strong>050-3588-2383</p>
+          <p><strong style="color:var(--primary);">インボイス登録番号：</strong>T7810709713142</p>
+          <p><strong style="color:var(--primary);">機械工具商：</strong>広島県公安委員会許可第731281900024</p>
+        </div>
       </section>
+
+      <!-- サービス -->
       <section class="card">
         <h2>主なサービス</h2>
         <ul class="service-list">
           <li>
-            <span class="service-stamp">🔧</span>
+            <div class="service-icon">🔧</div>
             <div class="service-text">
               <strong>修理・メンテナンス</strong>
-              <p style="margin:6px 0 0 0;">
-                古い機械、汎用工作機械の修理実績多数あります。なるべく早く—基本的に1週間以内での訪問解決を目指します。
-                現場へ出張いたします。
-                福山市内であれば御見積り無料現地へ訪問します。作業は別途。
-                遠方の方写真等でも見極め致します。現地へは移動費が発生いたします。
+              <p>
+                古い機械、汎用工作機械の修理実績多数あります。基本的に1週間以内での訪問解決を目指します。
+                福山市内であれば御見積り無料で現地へ訪問します。遠方の方は写真等でも見極め致します。
               </p>
             </div>
           </li>
           <li>
-            <span class="service-stamp">🤖</span>
+            <div class="service-icon">⚙️</div>
             <div class="service-text">
               <strong>工作機械・機械販売</strong>
-              <p style="margin:6px 0 0 0;">
+              <p>
                 メーカー問わず、お客様に最適な機械を検討・ご提案します。新品でも中古でも対応します。
                 近日中古機械入荷予定。
               </p>
             </div>
           </li>
           <li>
-            <span class="service-stamp">💪</span>
+            <div class="service-icon">💪</div>
             <div class="service-text">
               <strong>マッスルスーツ</strong>
-              <p style="margin:6px 0 0 0;">
-                作業の効率化・体力のサポートします。導入相談・販売・保守まで対応。
+              <p>
+                作業の効率化・体力のサポートをします。導入相談・販売・保守まで対応。
               </p>
             </div>
           </li>
         </ul>
       </section>
+
+      <!-- 修理実績 -->
       <section class="card" id="repair-records" aria-labelledby="repair-records-title">
         <h2 id="repair-records-title">修理実績</h2>
         <div style="overflow-x:auto;">
@@ -706,89 +872,110 @@
             </tbody>
           </table>
         </div>
-        <div style="margin-top:18px; color:#333; font-weight:500; font-size:1.06rem; text-align:center;">
-          他多数の修理実績あります。<br>
-          一度お問い合わせください。<br>
-          <a href="tel:08038804695" style="color:#2c3e50; font-size:1.18em; text-decoration:underline;">080-3880-4695</a>
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--success-light); border-radius:8px; text-align:center;">
+          <p style="font-weight:600; font-size:1.1rem; color:var(--text-primary); margin-bottom:1rem;">
+            他多数の修理実績あります。<br>
+            一度お問い合わせください。
+          </p>
+          <a href="tel:08038804695" style="font-size:1.5rem; font-weight:700; color:var(--primary);">080-3880-4695</a>
         </div>
       </section>
+
+      <!-- お問い合わせ -->
       <section class="contact card">
         <h2>お問い合わせ</h2>
-        <p>お気軽にご相談ください！</p>
-        <!-- Bot対策: ダミーフィールド（honeypot） -->
+        <p>お気軽にご相談ください</p>
         <form method="POST" action="mailto:info@kikai.work?subject=お問い合わせ" enctype="text/plain" autocomplete="off">
           <input type="text" name="company" value="" class="hidden-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <a class="btn" href="mailto:info@kikai.work?subject=お問い合わせ">メールで問い合わせる</a>
         </form>
       </section>
     </main>
+
+    <!-- サイドバー -->
     <aside class="sidebar">
+      <!-- ブログ -->
       <div class="card">
-        <a href="https://luster55.hateblo.jp/" class="blog-link" target="_blank" rel="noopener noreferrer">▶ キカイブログ（はてなブログ）</a>
+        <a href="https://luster55.hateblo.jp/" class="blog-link" target="_blank" rel="noopener noreferrer">▶ キカイブログ</a>
         <ul class="blog-list">
-          <li><a href="https://luster55.hateblo.jp/entry/2024/10/15/100000" target="_blank" rel="noopener noreferrer">旋盤修理日記：主軸ベアリング交換（2024/10/15）</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/09/27/100000" target="_blank" rel="noopener noreferrer">NC旋盤の油圧ユニット修理例（2024/09/27）</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/09/10/100000" target="_blank" rel="noopener noreferrer">ラジアルボール盤のクランプ不良（2024/09/10）</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/08/25/100000" target="_blank" rel="noopener noreferrer">【事例】古い旋盤の電装トラブル対応（2024/08/25）</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/07/30/100000" target="_blank" rel="noopener noreferrer">帯鋸盤シリンダー修理レポート（2024/07/30）</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/10/15/100000" target="_blank" rel="noopener noreferrer">旋盤修理日記：主軸ベアリング交換</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/09/27/100000" target="_blank" rel="noopener noreferrer">NC旋盤の油圧ユニット修理例</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/09/10/100000" target="_blank" rel="noopener noreferrer">ラジアルボール盤のクランプ不良</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/08/25/100000" target="_blank" rel="noopener noreferrer">古い旋盤の電装トラブル対応</a></li>
+          <li><a href="https://luster55.hateblo.jp/entry/2024/07/30/100000" target="_blank" rel="noopener noreferrer">帯鋸盤シリンダー修理レポート</a></li>
         </ul>
       </div>
+
+      <!-- 中古機械情報 -->
       <div class="card">
         <a href="https://www.jp.usedmachinery.bz/members/general_view/881" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;">
-          <img src="https://www.jp.usedmachinery.bz/img/common/logo.png" alt="中古機械情報百貨店" style="max-width:80%;height:auto;margin:0 auto 6px auto;display:block;">
-          <span style="display:block;font-weight:bold;color:#2c3e50;font-size:1.05em;margin-top:4px;">中古機械情報百貨店<br>（中古機械情報）</span>
+          <img src="https://www.jp.usedmachinery.bz/img/common/logo.png" alt="中古機械情報百貨店" style="max-width:80%;height:auto;margin:0 auto 1rem auto;display:block;">
+          <span style="display:block;font-weight:700;color:var(--primary);font-size:1.05rem;">中古機械情報百貨店</span>
         </a>
       </div>
-      <!-- COSENバナー・リンク追加 -->
+
+      <!-- COSEN -->
       <div class="card">
         <a href="https://www.cosen.com/ja/category/Automatic-bandsaw_Scissor-Style.html" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;">
           <img src="https://www.cosen.com/images/logo.png" alt="COSEN 台湾メーカー" class="cosen-banner">
-          <span style="display:block;font-weight:bold;color:#2c3e50;font-size:1.05em;margin-top:4px;">COSEN（コーセン）<br>自動バンドソー</span>
+          <span style="display:block;font-weight:700;color:var(--primary);font-size:1.05rem;">COSEN 自動バンドソー</span>
         </a>
       </div>
+
+      <!-- Instagram -->
       <div class="card">
-        <h2>Instagram</h2>
+        <h2 style="font-size:1.3rem;">Instagram</h2>
         <div class="insta-profile">
-          <img class="avatar" src="./images/insta-avatar.jpg" alt="luster_machinery">
+          <img class="avatar" src="./images/insta-avatar.jpg" alt="luster_machinery" loading="lazy">
           <div>
-            <div style="font-weight:700;">@luster_machinery</div>
-            <div style="color:#666; font-size:0.9rem;">中古機械・修理 / 動画で修理事例を公開</div>
-            <a class="follow-btn" href="https://www.instagram.com/luster_machinery/" target="_blank" rel="noopener noreferrer">Instagramを開く</a>
+            <div style="font-weight:700;font-size:1.05rem;">@luster_machinery</div>
+            <div style="color:var(--text-muted); font-size:0.9rem; margin-top:0.25rem;">中古機械・修理 / 動画で修理事例を公開</div>
+            <a class="follow-btn" href="https://www.instagram.com/luster_machinery/" target="_blank" rel="noopener noreferrer">フォローする</a>
           </div>
         </div>
       </div>
+
+      <!-- その他リンク -->
       <div class="card">
-        <h2>その他リンク</h2>
-        <ul style="padding-left:16px; margin:0;">
+        <h2 style="font-size:1.3rem;">その他リンク</h2>
+        <ul style="padding-left:1.25rem; margin:0; line-height:2;">
           <li><a href="#top">トップに戻る</a></li>
           <li><a href="#repair-records">修理実績</a></li>
           <li><a href="https://www.facebook.com/luster50m/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="https://luster55.hateblo.jp/" target="_blank" rel="noopener noreferrer">ブログ（キカイブログ）</a></li>
-          <li><a href="https://www.cosen.com/ja/category/Automatic-bandsaw_Scissor-Style.html" target="_blank" rel="noopener noreferrer">台湾COSEN（コーセン）自動バンドソー</a></li>
-      <footer>
-  <div style="max-width:1200px; margin:0 auto; padding:20px; text-align:left;">
-    <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; margin-bottom:20px;">
-      <div>
-        <h3 style="color:#fff; margin:0 0 10px 0; font-size:1.2em;">ラスターマシナリー（Luster Machinery）</h3>
-        <address style="font-style:normal; line-height:1.8; color:#dfe9ef;">
-          〒720-0311<br>
-          広島県福山市沼隈町常石2743<br>
-          TEL: <a href="tel:080-3880-4695" style="color:#ffe27b;">080-3880-4695</a><br>
-          Email: <a href="mailto:info@kikai.work" style="color:#ffe27b;">info@kikai.work</a><br>
-          営業時間: 月〜金 9:00-18:00
-        </address>
+          <li><a href="https://luster55.hateblo.jp/" target="_blank" rel="noopener noreferrer">ブログ</a></li>
+          <li><a href="https://www.cosen.com/ja/category/Automatic-bandsaw_Scissor-Style.html" target="_blank" rel="noopener noreferrer">COSEN 自動バンドソー</a></li>
+        </ul>
       </div>
-      <div>
-        <h4 style="color:#fff; margin:0 0 10px 0; font-size:1.1em;">対応エリア</h4>
-        <p style="color:#dfe9ef; line-height:1.8; margin:0;">
-          <strong style="color:#ffe27b;">全国出張対応</strong><br>
-          広島県、岡山県、山口県、鳥取県、島根県<br>
-          （中国地方全域）
-        </p>
+    </aside>
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    <div style="max-width:1200px; margin:0 auto; padding:0 1rem;">
+      <div style="display:flex; flex-wrap:wrap; gap:3rem; justify-content:space-between; margin-bottom:2rem;">
+        <div style="flex:1; min-width:280px;">
+          <h3 style="font-size:1.3rem; margin-bottom:1rem;">ラスターマシナリー</h3>
+          <address>
+            〒720-0311<br>
+            広島県福山市沼隈町常石2743<br>
+            TEL: <a href="tel:080-3880-4695" style="font-weight:700;">080-3880-4695</a><br>
+            Email: <a href="mailto:info@kikai.work" style="font-weight:700;">info@kikai.work</a><br>
+            営業時間: 月〜金 9:00-18:00
+          </address>
+        </div>
+        <div style="flex:1; min-width:280px;">
+          <h4 style="font-size:1.1rem; margin-bottom:1rem;">対応エリア</h4>
+          <p style="line-height:1.8;">
+            <strong style="font-size:1.1rem; color:#a7d8ff;">全国出張対応</strong><br>
+            広島県、岡山県、山口県、鳥取県、島根県<br>
+            （中国地方全域）
+          </p>
+        </div>
+      </div>
+      <div style="text-align:center; padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.2);">
+        <p style="margin:0; color:rgba(255,255,255,0.8);">&copy; 2025 ラスターマシナリー. All rights reserved.</p>
       </div>
     </div>
-  </div>
-  <div style="text-align:center; padding:15px 0; border-top:1px solid rgba(255,255,255,0.1);">
-    <p style="margin:0;">&copy; 2025 ラスターマシナリー. All rights reserved.</p>
-  </div>
-</footer> 
+  </footer>
+</body>
+</html>
