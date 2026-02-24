@@ -1055,5 +1055,54 @@
       </div>
     </div>
   </footer>
+  <!-- 画像モーダル -->
+<div class="image-modal" id="imageModal" aria-hidden="true">
+  <div class="image-modal__content" role="dialog" aria-modal="true" aria-label="画像拡大">
+    <button type="button" class="image-modal__close" id="imageModalClose" aria-label="閉じる">×</button>
+    <img class="image-modal__img" id="imageModalImg" alt="">
+  </div>
+</div>
+  <script>
+  (function () {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('imageModalImg');
+    const closeBtn = document.getElementById('imageModalClose');
+
+    function openModal(src, alt) {
+      modalImg.src = src;
+      modalImg.alt = alt || '';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (e) {
+      const trigger = e.target.closest('.js-image-modal');
+      if (trigger) {
+        e.preventDefault();
+        const src = trigger.dataset.full || trigger.getAttribute('href');
+        const img = trigger.querySelector('img');
+        openModal(src, img ? img.alt : '');
+      }
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+  })();
+</script>
 </body>
 </html>
