@@ -667,44 +667,7 @@
       <section class="inventory card" id="inventory">
         <h2>中古機械在庫情報</h2>
         <div style="overflow-x:auto;">
-          /* 在庫テーブル：状態列を写真サムネ化 */
-.status-cell{
-  width: 160px;
-  min-width: 140px;
-  vertical-align: middle;
-}
-
-.machine-thumb-link{
-  display: inline-block;
-  line-height: 0;
-}
-
-.machine-thumb{
-  width: 140px;
-  height: 92px; /* だいたい3:2 */
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.inventory-table tr:hover .machine-thumb{
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.status-badge{
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.2rem 0.65rem;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #fff;
-  background: var(--success);
-  border-radius: 999px;
-}
+         
           <table class="inventory-table" aria-describedby="inventory-note">
             <thead>
               <tr>
