@@ -453,6 +453,18 @@
       box-shadow: 0 2px 10px rgba(52, 152, 219, 0.08);
       padding: 6px 0;
     }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1vw;
+      margin-top: 1vw;
+    }
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -599,15 +611,15 @@
       </section>
       <section class="card" id="gallery">
         <h2>作業風景・機械写真</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1vw; margin-top:1vw;">
-          <img src="./images/IMG_0766.jpg" alt="作業風景1" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_1217.jpg" alt="作業風景2" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_1306.jpg" alt="機械写真1" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_1565.jpg" alt="機械写真2" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_1774.jpg" alt="作業風景3" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_2046.jpg" alt="機械写真3" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/IMG_2783.jpg" alt="機械写真4" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="./images/image1.jpeg" alt="作業風景4" style="width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <div class="gallery-grid">
+          <img src="./images/IMG_0766.jpg" alt="工作機械の内部部品修理作業" class="gallery-image">
+          <img src="./images/IMG_1217.jpg" alt="旋盤の主軸とチャック部分の修理" class="gallery-image">
+          <img src="./images/IMG_1306.jpg" alt="汎用旋盤機械の全体写真" class="gallery-image">
+          <img src="./images/IMG_1565.jpg" alt="機械部品とギア" class="gallery-image">
+          <img src="./images/IMG_1774.jpg" alt="工作機械の電装部品修理" class="gallery-image">
+          <img src="./images/IMG_2046.jpg" alt="NC制御盤の配線作業" class="gallery-image">
+          <img src="./images/IMG_2783.jpg" alt="機械の油圧システム点検" class="gallery-image">
+          <img src="./images/image1.jpeg" alt="修理完了した機械部品" class="gallery-image">
         </div>
         <p style="text-align:center; margin-top:1vw; color:#666; font-size:0.95em;">
           修理・メンテナンス作業の様子と取り扱い機械の一部です。
