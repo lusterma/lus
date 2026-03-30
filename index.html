@@ -696,11 +696,132 @@
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
+
+    /* ===== ヘッダーCTA ===== */
+    .header-cta {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .response-badge {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      font-weight: 700;
+      font-size: clamp(0.85rem, 2.2vw, 1.05rem);
+      letter-spacing: 0.05em;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .header-tel-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      color: var(--primary);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 900;
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      letter-spacing: 0.04em;
+    }
+
+    .header-tel-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .tel-sub {
+      margin-top: 0.5rem;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+    }
+
+    /* ===== スティッキー電話ボタン（モバイルのみ） ===== */
+    .sticky-call-btn {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      .sticky-call-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9998;
+        background: #ff6600;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 0.85rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(255,102,0,0.45);
+        white-space: nowrap;
+        letter-spacing: 0.04em;
+        animation: pulse-cta 2.4s ease-in-out infinite;
+      }
+
+      .sticky-call-btn:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      @keyframes pulse-cta {
+        0%, 100% { box-shadow: 0 4px 20px rgba(255,102,0,0.45); }
+        50%       { box-shadow: 0 4px 32px rgba(255,102,0,0.75); }
+      }
+    }
+
+    /* ===== 修理写真ギャラリー ===== */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+
+    .photo-grid-item {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: zoom-in;
+      display: block;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .photo-grid-item:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 700px) {
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Google翻訳ツールバー設置 -->
   <div id="google_translate_element" style="position:fixed;top:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);padding:0.5rem 1rem;border-radius:0 0 0 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);"></div>
+
+  <!-- スティッキー電話ボタン（モバイルのみ） -->
+  <a href="tel:08038804695" class="sticky-call-btn" aria-label="電話で問い合わせる">
+    <span aria-hidden="true">📞</span>
+    <span>今すぐ電話する</span>
+  </a>
   
   <a id="top"></a>
   
@@ -719,6 +840,18 @@
         <span class="free-estimate">福山市内御見積り無料</span>
       </div>
       <p style="margin:1rem 0 0 0; color:rgba(255,255,255,0.9); text-align:center;">中古工作機械の販売・修理で製造業をサポート</p>
+
+      <!-- ファーストビューCTA -->
+      <div class="header-cta">
+        <div class="response-badge"><span aria-hidden="true">⏱</span> 原則1週間・最短翌日対応</div>
+        <div>
+          <a href="tel:08038804695" class="header-tel-btn">
+            <span aria-hidden="true">📞</span>
+            <span>080-3880-4695</span>
+          </a>
+        </div>
+        <div class="tel-sub">お気軽にお電話ください（9:00〜18:00）</div>
+      </div>
     </div>
   </header>
 
@@ -843,6 +976,41 @@
             </div>
           </li>
         </ul>
+      </section>
+
+      <!-- 修理写真ギャラリー -->
+      <section class="card" id="photo-gallery">
+        <h2>修理現場の写真</h2>
+        <div class="photo-grid">
+          <img
+            src="images/IMG_0766.jpg"
+            alt="工作機械の修理作業の様子"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_0766.jpg"
+            loading="lazy"
+          />
+          <img
+            src="images/IMG_1217.jpg"
+            alt="機械部品の点検・整備作業"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_1217.jpg"
+            loading="lazy"
+          />
+          <img
+            src="images/IMG_1565.jpg"
+            alt="出張修理・現場対応の様子"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_1565.jpg"
+            loading="lazy"
+          />
+          <img
+            src="images/IMG_2783.jpg"
+            alt="工作機械のメンテナンス・修理完了後"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_2783.jpg"
+            loading="lazy"
+          />
+        </div>
       </section>
 
       <!-- 修理実績 -->
