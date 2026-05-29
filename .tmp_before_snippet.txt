@@ -1,0 +1,186 @@
+            <span>080-3880-4695</span>
+          </a>
+        </div>
+        <div class="tel-sub">お気軽にお電話ください（9:00〜18:00）</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page">
+    <main>
+      <!-- 機械ドック -->
+      <section class="card" id="kikai-dock">
+        <h2>機械ドック</h2>
+        <p style="font-size:1.1rem; font-weight:700; color:var(--primary); margin-bottom:1rem;">古い工作機械の点検サービス</p>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1rem;">
+          旋盤・ボール盤・ラジアルボール盤・帯鋸盤・フライス盤など、長年使っている工作機械を止まる前に点検します。<br>
+          異音、油漏れ、送り不良、昇降不良、スイッチ不良などを現地で確認し、今すぐ修理すべき箇所、しばらく様子を見られる箇所、入替を検討すべき機械を分かりやすく整理します。<br>
+          買い替え前の状態確認や、中古機械導入前の相談にも対応します。
+        </p>
+        <div style="background:var(--success-light); border-left:4px solid var(--success); border-radius:8px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+          <p style="font-weight:700; color:var(--primary); margin-bottom:0.5rem;">料金目安</p>
+          <ul style="list-style:none; padding:0; margin:0; color:var(--text-secondary); line-height:2;">
+            <li>1台点検　<strong>35,000円〜</strong></li>
+            <li>3台まとめて点検　<strong>90,000円〜</strong></li>
+          </ul>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">※地域により交通費・出張費が別途かかる場合があります。事前に点検料金と交通費の目安をお伝えします。</p>
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+          <a class="btn" href="tel:08038804695" style="background:linear-gradient(135deg, #ff6600 0%, #cc5200 100%); box-shadow:0 4px 12px rgba(255,102,0,0.25);">
+            📞 機械ドックを相談する
+          </a>
+          <a class="btn" href="mailto:info@kikai.work?subject=機械ドック相談">
+            ✉ メールで相談
+          </a>
+        </div>
+      </section>
+
+      <!-- 在庫情報 -->
+      <section class="inventory card" id="inventory">
+        <h2>中古機械在庫情報</h2>
+        <div style="overflow-x:auto;">
+         
+          <table class="inventory-table" aria-describedby="inventory-note">
+            <thead>
+              <tr>
+                <th>状態</th>
+                <th>機種</th>
+                <th>型式</th>
+                <th>所在地</th>
+                <th>備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="status-cell">
+  <img
+  src="images/dfffff.jpg"
+  alt="汎用フライス ME-2 写真"
+  class="machine-thumb js-image-modal"
+  data-full="images/dfffff.jpg"
+  loading="lazy"
+/>
+  </td>
+  <td>汎用フライス</td>
+  <td>ME-2・大鳥機工</td>
+  <td>広島</td>
+  <td>中古機械</td>
+             </tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="inventory-note" class="inventory-note">
+          在庫・価格・写真はお問い合わせください。機械探します。
+        </p>
+        <p style="text-align:center; margin-top:1.5rem;">
+          <a class="btn" href="mailto:info@kikai.work?subject=在庫確認">在庫を確認・見積もり依頼</a>
+        </p>
+      </section>
+
+      <!-- CM動画 -->
+      <section class="hero card">
+        <h2>CM動画</h2>
+        <div class="reel-wrapper">
+          <video
+            class="video-embed-full"
+            src="videos/CM2.mp4"
+            loading="lazy"
+            preload="metadata"
+            muted
+            playsinline
+            autoplay
+            controls
+            poster=""
+          >
+            お使いのブラウザは video タグに対応していません。
+          </video>
+        </div>
+      </section>
+
+      <!-- 会社概要 -->
+      <section class="card" id="company-overview">
+        <h2>会社概要</h2>
+        <div style="display:grid;gap:1rem;">
+          <p><strong style="color:var(--primary);">会社名：</strong>ラスターマシナリー（Luster Machinery）</p>
+          <p><strong style="color:var(--primary);">代表：</strong>田中 健太郎</p>
+          <p><strong style="color:var(--primary);">所在地：</strong>広島県福山市沼隈町常石</p>
+          <p><strong style="color:var(--primary);">設立：</strong>2019年10月</p>
+          <p><strong style="color:var(--primary);">事業内容：</strong>工作機械修理、出張修理・保守メンテナンス、新品中古機械販売、マッスルスーツ販売保守</p>
+          <div style="background:var(--success-light);padding:1.5rem;border-radius:8px;border-left:4px solid var(--success);margin-top:1rem;">
+            <p style="font-weight:600; color:var(--primary); line-height:1.8;">
+              工作機械の営業・工作機械の修理・主に汎用機。<br>
+              台湾COSEN社にてバンドソーの組み立てを経て設立致しました。<br>
+              COSEN社の機械のご相談賜ります。<strong>COSEN専属整備士</strong>
+            </p>
+          </div>
+          <p><strong style="color:var(--primary);">連絡先：</strong><a href="tel:080-3880-4695" style="font-weight:700;">080-3880-4695</a> / <a href="mailto:info@kikai.work" style="font-weight:700;">info@kikai.work</a></p>
+          <p><strong style="color:var(--primary);">FAX：</strong>050-3588-2383</p>
+          <p><strong style="color:var(--primary);">インボイス登録番号：</strong>T7810709713142</p>
+          <p><strong style="color:var(--primary);">機械工具商：</strong>広島県公安委員会許可第731281900024</p>
+        </div>
+      </section>
+
+      <!-- サービス -->
+      <section class="card">
+        <h2>主なサービス</h2>
+        <ul class="service-list">
+          <li>
+            <div class="service-icon">🔍</div>
+            <div class="service-text">
+              <strong>機械ドック（点検サービス）</strong>
+              <p>
+                旋盤・ボール盤・帯鋸盤・フライス盤など、長年使っている工作機械を止まる前に点検します。
+                異音・油漏れ・送り不良などを現地確認し、修理・様子見・入替を分かりやすく整理します。1台35,000円〜。
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="service-icon">🔧</div>
+            <div class="service-text">
+              <strong>修理・メンテナンス</strong>
+              <p>
+                古い機械、汎用工作機械の修理実績多数あります。基本的に1週間以内での訪問解決を目指します。
+                福山市内であれば御見積り無料で現地へ訪問します。遠方の方は写真等でも見極め致します。
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="service-icon">⚙️</div>
+            <div class="service-text">
+              <strong>工作機械・機械販売</strong>
+              <p>
+                メーカー問わず、お客様に最適な機械を検討・ご提案します。新品でも中古でも対応します。
+                近日中古機械入荷予定。
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="service-icon">💪</div>
+            <div class="service-text">
+              <strong>マッスルスーツ</strong>
+              <p>
+                作業の効率化・体力のサポートをします。導入相談・販売・保守まで対応。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 修理写真ギャラリー -->
+      <section class="card" id="photo-gallery">
+        <h2>修理現場の写真</h2>
+        <div class="photo-grid">
+          <img
+            src="images/IMG_0766.jpg"
+            alt="工作機械の修理作業の様子"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_0766.jpg"
+            loading="lazy"
+          />
+          <img
+            src="images/IMG_1217.jpg"
+            alt="機械部品の点検・整備作業"
+            class="photo-grid-item js-image-modal"
+            data-full="images/IMG_1217.jpg"
+            loading="lazy"
+          />
