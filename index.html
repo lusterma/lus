@@ -16,8 +16,8 @@
   <title>工作機械修理の専門家 | 全国出張対応（広島・岡山・山口・鳥取・島根）| ラスターマシナリー</title>
 
   <!-- Primary description for SEO (replaces older/truncated descriptions) -->
-  <meta name="description" content="広島県福山市より全国出張対応。中国地方（広島・岡山・山口・鳥取・島根）での工作機械修理・中古販売。COSENバンドソー保守専門。機械ドック・点検サービス。">
-  <meta name="keywords" content="金属切削加工,機械修理,工作機械,修理,中古機械,旋盤,NC,汎用機,古い機械,福山市,広島,岡山,山口,鳥取,島根,中国地方,全国出張,機械ドック,点検">
+  <meta name="description" content="広島県福山市より全国出張対応。中国地方（広島・岡山・山口・鳥取・島根）での工作機械修理・中古販売。COSENバンドソーの保守・修理に強みがあります。">
+  <meta name="keywords" content="金属切削加工,機械修理,工作機械,修理,中古機械,旋盤,NC,汎用機,古い機械,福山市,広島,岡山,山口,鳥取,島根,中国地方,全国出張,バンドソー,COSEN,JIMTOF2026">
 
   <!-- Open Graph（SNS共有用） -->
   <meta property="og:title" content="工作機械修理の専門家 | ラスターマシナリー">
@@ -70,7 +70,7 @@
   </script>
 
   <!-- セキュリティ強化: CSP, XSS, Referrer-Policy, X-Content-Type-Options 等 -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://translate.google.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://translate.google.com https://www.google.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https://www.google.com https://translate.google.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -109,13 +109,7 @@
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
       --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       background-color: var(--bg-main);
       color: var(--text-primary);
@@ -127,20 +121,13 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    
-    /* ヘッダー */
     header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 2rem 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    
-    header .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
+    header .header-inner { max-width: 1200px; margin: 0 auto; }
     .company-highlight {
       text-align: center;
       font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -159,665 +146,146 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-    
     .h1-sinbol, .h1-image {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255,255,255,0.3);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 3.5rem; height: 3.5rem; border-radius: 50%; object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.3); box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    
-    .h1-sinbol {
-      border-radius: 12px;
-    }
-    
+    .h1-sinbol { border-radius: 12px; }
     header h1 {
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      font-weight: 700;
-      color: rgba(255,255,255,0.95);
-      text-align: center;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.02em;
+      font-size: clamp(0.9rem, 2vw, 1.1rem); font-weight: 700; color: rgba(255,255,255,0.95);
+      text-align: center; margin-bottom: 0.5rem; letter-spacing: 0.02em;
     }
-    
-    .catchphrase {
-      text-align: center;
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
-      font-weight: 700;
-      color: #ffffff;
-      margin: 1rem 0;
-      letter-spacing: 0.05em;
-    }
-    
-    .free-estimate {
-      display: inline-block;
-      background: var(--success);
-      color: white;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
-      box-shadow: 0 4px 12px rgba(13, 143, 74, 0.3);
-      transition: all 0.3s ease;
-    }
-    
-    .free-estimate:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(13, 143, 74, 0.4);
-    }
-    
-    /* レイアウト */
-    .page {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    
-    main {
-      flex: 1;
-      min-width: 0;
-    }
-    
-    aside.sidebar {
-      width: 340px;
-      flex-shrink: 0;
-    }
-    
-    /* カード */
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow-md);
-      margin-bottom: 2rem;
-      border: 1px solid var(--border-light);
-      transition: box-shadow 0.3s ease;
-    }
-    
-    .card:hover {
-      box-shadow: var(--shadow-lg);
-    }
-    
-    h2 {
-      color: var(--primary);
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin: 0 0 1.5rem 0;
-      padding-bottom: 0.75rem;
-      border-bottom: 3px solid var(--accent);
-      position: relative;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--success);
-    }
-    
-    /* テーブル */
-    .inventory-table, .repair-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--bg-card);
-      box-shadow: var(--shadow-sm);
-      border-radius: 8px;
-      overflow: hidden;
-      font-size: 0.95rem;
-    }
-    
+    .catchphrase { text-align: center; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: #ffffff; margin: 1rem 0; letter-spacing: 0.05em; }
+    .free-estimate { display: inline-block; background: var(--success); color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(13, 143, 74, 0.3); transition: all 0.3s ease; }
+    .free-estimate:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(13, 143, 74, 0.4); }
+    .page { display: flex; flex-direction: row; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+    main { flex: 1; min-width: 0; }
+    aside.sidebar { width: 340px; flex-shrink: 0; }
+    .card { background: var(--bg-card); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-md); margin-bottom: 2rem; border: 1px solid var(--border-light); transition: box-shadow 0.3s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); }
+    h2 { color: var(--primary); font-size: 1.75rem; font-weight: 700; margin: 0 0 1.5rem 0; padding-bottom: 0.75rem; border-bottom: 3px solid var(--accent); position: relative; }
+    h2::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 60px; height: 3px; background: var(--success); }
+    .inventory-table, .repair-table { width: 100%; border-collapse: collapse; background: var(--bg-card); box-shadow: var(--shadow-sm); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
     .inventory-table th, .inventory-table td,
-    .repair-table th, .repair-table td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border-light);
-    }
-    
-    .inventory-table th, .repair-table th {
-      background: linear-gradient(to bottom, #f7fafc, #edf2f7);
-      color: var(--text-primary);
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-    }
-    
-    .inventory-table tr:hover td,
-    .repair-table tr:hover td {
-      background: #f8fafc;
-    }
-    
-    .inventory-note {
-      text-align: center;
-      margin-top: 1rem;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-    
-    /* サービスリスト */
-    ul.service-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 1.5rem;
-    }
-    
-    ul.service-list li {
-      background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+    .repair-table th, .repair-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-light); }
+    .inventory-table th, .repair-table th { background: linear-gradient(to bottom, #f7fafc, #edf2f7); color: var(--text-primary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; }
+    .inventory-table tr:hover td, .repair-table tr:hover td { background: #f8fafc; }
+    .inventory-note { text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.95rem; }
+    .notice-box {
+      background: linear-gradient(135deg, #fff7ed 0%, #fff 100%);
+      border: 1px solid #fdba74;
+      border-left: 6px solid #f97316;
+      border-radius: 14px;
       padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid var(--border-light);
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-sm);
-    }
-    
-    ul.service-list li:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent);
-    }
-    
-    .service-icon {
-      width: 4rem;
-      height: 4rem;
-      min-width: 4rem;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
-    }
-    
-    .service-text strong {
-      display: block;
-      font-size: 1.2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-    
-    .service-text p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin: 0;
-    }
-    
-    /* ボタン */
-    .btn, .contact a.btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-      color: white;
-      padding: 1rem 2.5rem;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
-      border: none;
-      cursor: pointer;
-      letter-spacing: 0.02em;
-    }
-    
-    .btn:hover, .contact a.btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
-      text-decoration: none;
-    }
-    
-    /* お問い合わせセクション */
-    .contact {
-      background: linear-gradient(135deg, var(--success-light) 0%, #f0fdf4 100%);
-      padding: 2.5rem;
-      border-radius:  12px;
-      text-align: center;
-      border: 2px solid #d1fae5;
-      box-shadow: var(--shadow-md);
-    }
-    
-    .contact h2 {
-      border-bottom: none;
-    }
-    
-    .contact h2::after {
-      display: none;
-    }
-    
-    .contact p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
       margin-bottom: 1.5rem;
-    }
-    
-    /* 動画 */
-    .reel-wrapper {
-      width: 100%;
-      max-width: 100%;
-      aspect-ratio: 16/9;
-      background: #000;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .video-embed-full {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-    
-    /* サイドバー */
-    .sidebar .card {
-      padding: 1.5rem;
-    }
-    
-    .insta-profile {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    
-    .insta-profile .avatar {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--border-medium);
       box-shadow: var(--shadow-sm);
     }
-    
-    .follow-btn {
+    .notice-badge {
       display: inline-block;
-      margin-top: 0.5rem;
-      font-weight: 600;
-      color: white;
-      background: linear-gradient(135deg, #E1306C 0%, #C13584 100%);
-      border-radius: 50px;
-      padding: 0.5rem 1.5rem;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(225, 48, 108, 0.2);
-    }
-    
-    .follow-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
-    }
-    
-    .blog-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .blog-list li {
-      margin-bottom: 1rem;
-      padding-left: 1rem;
-      border-left: 4px solid var(--accent);
-      background: #f8fafc;
-      padding: 0.75rem 1rem;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-    }
-    
-    .blog-list li:hover {
-      background: #edf2f7;
-      border-left-color: var(--success);
-    }
-    
-    .blog-link {
-      display: block;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      transition: color 0.2s ease;
-    }
-    
-    .blog-link:hover {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-    
-    .cosen-banner {
-      display: block;
-      margin: 1rem auto;
-      max-width: 200px;
-      width: 100%;
-      height: auto;
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.3s ease;
-    }
-    
-    .cosen-banner:hover {
-      transform: scale(1.05);
-    }
-    
-    /* フッター */
-    footer {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: white;
-      padding: 3rem 1rem 1rem;
-      margin-top: 4rem;
-    }
-    
-    footer h3, footer h4 {
-      color: white;
-      margin-bottom: 1rem;
-    }
-    
-    footer a {
-      color: #a7d8ff;
-      transition: color 0.2s ease;
-    }
-    
-    footer a:hover {
-      color: white;
-    }
-    
-    address {
-      font-style: normal;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.9);
-    }
-    
-    /* レスポンシブ */
-    @media (max-width: 1000px) {
-      .page {
-        flex-direction: column;
-      }
-      
-      aside.sidebar {
-        width: 100%;
-        max-width: 100%;
-      }
-      
-      .company-highlight {
-        font-size: clamp(1.3rem, 5vw, 2rem);
-      }
-    }
-    
-    @media (max-width: 700px) {
-      header {
-        padding: 1.5rem 1rem;
-      }
-      
-      .page {
-        padding: 1rem;
-      }
-      
-      .card {
-        padding: 1.5rem;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
-      }
-      
-      .h1-sinbol, .h1-image {
-        width: 2.5rem;
-        height: 2.5rem;
-      }
-      
-      ul.service-list li {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .service-icon {
-        margin: 0 auto;
-      }
-      
-      .inventory-table, .repair-table {
-        font-size: 0.85rem;
-      }
-      
-      .inventory-table th, .inventory-table td,
-      .repair-table th, .repair-table td {
-        padding: 0.75rem 0.5rem;
-      }
-    }
-    
-    .hidden-honeypot {
-      display: none !important;
-    }
-    
-    /* リンクスタイル */
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
-    
-    /* スクロールバー */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: var(--bg-main);
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-medium);
-      border-radius: 5px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--text-muted);
-    }
-    /* ===== 画像サムネ（小さく統一） ===== */
-.machine-thumb-link {
-  display: inline-block;
-}
-
-.machine-thumb {
-  width: 96px;        /* 好きなサイズに調整OK */
-  height: 72px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  cursor: zoom-in;
-}
-
-/* ===== モーダル（同ページ拡大） ===== */
-.image-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  z-index: 10000; /* google翻訳ツールバー(9999)より上 */
-}
-
-.image-modal.is-open {
-  display: flex;
-}
-
-.image-modal__content {
-  position: relative;
-  max-width: min(1100px, 96vw);
-  max-height: 90vh;
-}
-
-.image-modal__img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 90vh;
-  display: block;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.image-modal__close {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 999px;
-  background: #fff;
-  color: #111;
-  font-size: 24px;
-  line-height: 44px;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-    /* ===== ヘッダーCTA ===== */
-    .header-cta {
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-
-    .response-badge {
-      display: inline-block;
-      background: #ff6600;
+      background: #f97316;
       color: #fff;
-      font-weight: 700;
-      font-size: clamp(0.85rem, 2.2vw, 1.05rem);
-      letter-spacing: 0.05em;
-      padding: 0.4rem 1.2rem;
-      border-radius: 50px;
-      margin-bottom: 1rem;
-    }
-
-    .header-tel-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #fff;
-      color: var(--primary);
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 900;
-      padding: 0.6rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      letter-spacing: 0.04em;
-    }
-
-    .header-tel-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.22);
-      text-decoration: none;
-      color: var(--primary);
-    }
-
-    .tel-sub {
-      margin-top: 0.5rem;
-      color: rgba(255,255,255,0.85);
+      font-weight: 800;
       font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
     }
-
-    /* ===== スティッキー電話ボタン（モバイルのみ） ===== */
-    .sticky-call-btn {
-      display: none;
+    .notice-box h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
     }
-
-    @media (max-width: 700px) {
-      .sticky-call-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        position: fixed;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 9998;
-        background: #ff6600;
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 700;
-        padding: 0.85rem 2rem;
-        border-radius: 50px;
-        text-decoration: none;
-        box-shadow: 0 4px 20px rgba(255,102,0,0.45);
-        white-space: nowrap;
-        letter-spacing: 0.04em;
-        animation: pulse-cta 2.4s ease-in-out infinite;
-      }
-
-      .sticky-call-btn:hover {
-        text-decoration: none;
-        color: #fff;
-      }
-
-      @keyframes pulse-cta {
-        0%, 100% { box-shadow: 0 4px 20px rgba(255,102,0,0.45); }
-        50%       { box-shadow: 0 4px 32px rgba(255,102,0,0.75); }
-      }
-    }
-
-    /* ===== 修理写真ギャラリー ===== */
-    .photo-grid {
+    .notice-meta {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.75rem;
+      gap: 0.4rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid var(--border-light);
     }
-
-    .photo-grid-item {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 8px;
-      cursor: zoom-in;
-      display: block;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .photo-grid-item:hover {
-      opacity: 0.9;
-      transform: scale(1.02);
-    }
-
+    .notice-meta p { margin: 0; color: var(--text-secondary); }
+    .notice-meta strong { color: var(--primary); }
+    ul.service-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
+    ul.service-list li { background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-light); display: flex; gap: 1.5rem; align-items: flex-start; transition: all 0.3s ease; box-shadow: var(--shadow-sm); }
+    ul.service-list li:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+    .service-icon { width: 4rem; height: 4rem; min-width: 4rem; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2); }
+    .service-text strong { display: block; font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 700; }
+    .service-text p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .btn, .contact a.btn { display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2); border: none; cursor: pointer; letter-spacing: 0.02em; }
+    .btn:hover, .contact a.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3); text-decoration: none; }
+    .contact { background: linear-gradient(135deg, var(--success-light) 0%, #f0fdf4 100%); padding: 2.5rem; border-radius:  12px; text-align: center; border: 2px solid #d1fae5; box-shadow: var(--shadow-md); }
+    .contact h2 { border-bottom: none; }
+    .contact h2::after { display: none; }
+    .contact p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .reel-wrapper { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); }
+    .video-embed-full { width: 100%; height: 100%; border: none; display: block; }
+    .sidebar .card { padding: 1.5rem; }
+    .insta-profile { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .insta-profile .avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid var(--border-medium); box-shadow: var(--shadow-sm); }
+    .follow-btn { display: inline-block; margin-top: 0.5rem; font-weight: 600; color: white; background: linear-gradient(135deg, #E1306C 0%, #C13584 100%); border-radius: 50px; padding: 0.5rem 1.5rem; text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(225, 48, 108, 0.2); }
+    .follow-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3); }
+    .blog-list { list-style: none; padding: 0; margin: 0; }
+    .blog-list li { margin-bottom: 1rem; padding-left: 1rem; border-left: 4px solid var(--accent); background: #f8fafc; padding: 0.75rem 1rem; border-radius: 4px; transition: all 0.2s ease; }
+    .blog-list li:hover { background: #edf2f7; border-left-color: var(--success); }
+    .blog-link { display: block; font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.1rem; margin-bottom: 1rem; transition: color 0.2s ease; }
+    .blog-link:hover { color: var(--accent); text-decoration: underline; }
+    .cosen-banner { display: block; margin: 1rem auto; max-width: 200px; width: 100%; height: auto; background: white; border-radius: 8px; padding: 1rem; box-shadow: var(--shadow-sm); transition: transform 0.3s ease; }
+    .cosen-banner:hover { transform: scale(1.05); }
+    footer { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 3rem 1rem 1rem; margin-top: 4rem; }
+    footer h3, footer h4 { color: white; margin-bottom: 1rem; }
+    footer a { color: #a7d8ff; transition: color 0.2s ease; }
+    footer a:hover { color: white; }
+    address { font-style: normal; line-height: 1.8; color: rgba(255,255,255,0.9); }
+    @media (max-width: 1000px) { .page { flex-direction: column; } aside.sidebar { width: 100%; max-width: 100%; } .company-highlight { font-size: clamp(1.3rem, 5vw, 2rem); } }
     @media (max-width: 700px) {
-      .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      header { padding: 1.5rem 1rem; }
+      .page { padding: 1rem; }
+      .card { padding: 1.5rem; }
+      h2 { font-size: 1.5rem; }
+      .h1-sinbol, .h1-image { width: 2.5rem; height: 2.5rem; }
+      ul.service-list li { flex-direction: column; text-align: center; }
+      .service-icon { margin: 0 auto; }
+      .inventory-table, .repair-table { font-size: 0.85rem; }
+      .inventory-table th, .inventory-table td,
+      .repair-table th, .repair-table td { padding: 0.75rem 0.5rem; }
     }
+    .hidden-honeypot { display: none !important; }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg-main); }
+    ::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+    .machine-thumb-link { display: inline-block; }
+    .machine-thumb { width: 96px; height: 72px; object-fit: cover; border-radius: 8px; display: block; cursor: zoom-in; }
+    .image-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 10000; }
+    .image-modal.is-open { display: flex; }
+    .image-modal__content { position: relative; max-width: min(1100px, 96vw); max-height: 90vh; }
+    .image-modal__img { width: auto; height: auto; max-width: 100%; max-height: 90vh; display: block; border-radius: 10px; background: #fff; }
+    .image-modal__close { position: absolute; top: -12px; right: -12px; width: 44px; height: 44px; border: none; border-radius: 999px; background: #fff; color: #111; font-size: 24px; line-height: 44px; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+    .header-cta { margin-top: 1.5rem; text-align: center; }
+    .response-badge { display: inline-block; background: #ff6600; color: #fff; font-weight: 700; font-size: clamp(0.85rem, 2.2vw, 1.05rem); letter-spacing: 0.05em; padding: 0.4rem 1.2rem; border-radius: 50px; margin-bottom: 1rem; }
+    .header-tel-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; color: var(--primary); font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 900; padding: 0.6rem 1.8rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform 0.2s ease, box-shadow 0.2s ease; letter-spacing: 0.04em; }
+    .header-tel-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.22); text-decoration: none; color: var(--primary); }
+    .tel-sub { margin-top: 0.5rem; color: rgba(255,255,255,0.85); font-size: 0.9rem; }
+    .sticky-call-btn { display: none; }
+    @media (max-width: 700px) {
+      .sticky-call-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 9998; background: #ff6600; color: #fff; font-size: 1.1rem; font-weight: 700; padding: 0.85rem 2rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(255,102,0,0.45); white-space: nowrap; letter-spacing: 0.04em; animation: pulse-cta 2.4s ease-in-out infinite; }
+      .sticky-call-btn:hover { text-decoration: none; color: #fff; }
+      @keyframes pulse-cta { 0%, 100% { box-shadow: 0 4px 20px rgba(255,102,0,0.45); } 50% { box-shadow: 0 4px 32px rgba(255,102,0,0.75); } }
+    }
+    .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .photo-grid-item { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: zoom-in; display: block; transition: opacity 0.2s ease, transform 0.2s ease; }
+    .photo-grid-item:hover { opacity: 0.9; transform: scale(1.02); }
+    @media (max-width: 700px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-  <!-- Google翻訳ツールバー設置 -->
-  <div id="google_translate_element" style="position:fixed;top:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);padding:0.5rem 1rem;border-radius:0 0 0 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);"></div>
+  <div id="google_translate_element" style="position:fixed;top:0;right:0;z-index:9999;background:rgba(255,255,255,0.95);padding:0.5rem 1rem;border-radius:0 0 0 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1)"></div>
 
-  <!-- スティッキー電話ボタン（モバイルのみ） -->
   <a href="tel:08038804695" class="sticky-call-btn" aria-label="電話で問い合わせる">
     <span aria-hidden="true">📞</span>
     <span>今すぐ電話する</span>
@@ -841,7 +309,6 @@
       </div>
       <p style="margin:1rem 0 0 0; color:rgba(255,255,255,0.9); text-align:center;">中古工作機械の販売・修理で製造業をサポート</p>
 
-      <!-- ファーストビューCTA -->
       <div class="header-cta">
         <div class="response-badge"><span aria-hidden="true">⏱</span> 原則1週間・最短翌日対応</div>
         <div>
@@ -857,8 +324,21 @@
 
   <div class="page">
     <main>
-      <!-- 機械修理・故障相談 -->
       <section class="card" id="repair-consultation">
+        <div class="notice-box">
+          <span class="notice-badge">JIMTOF2026 出展情報</span>
+          <h3>【COSEN、JIMTOF2026に出展】</h3>
+          <p>台湾の帯鋸盤メーカー「COSEN」が、東京ビッグサイトで開催されるJIMTOF2026に出展します。</p>
+          <p>会場では、全自動横型帯鋸盤「G320」を展示予定。高剛性のデュアルコラム構造、安定した切断性能、自動送りによる量産性など、COSENの機械を実際に見て確認できる貴重な機会です。</p>
+          <p>欧米をはじめ世界各国で導入されているCOSENの帯鋸盤を、ぜひ会場でご覧ください。</p>
+          <div class="notice-meta">
+            <p><strong>開催期間：</strong>2026年10月26日（月）～10月31日（土）</p>
+            <p><strong>会場：</strong>東京ビッグサイト</p>
+            <p><strong>COSENブース：</strong>南展示棟 S2023</p>
+            <p><strong>展示予定機：</strong>COSEN G320 全自動横型帯鋸盤</p>
+          </div>
+          <p>COZEN帯鋸盤の導入、機種選定、見積り、修理・メンテナンスについては、ラスターマシナリーまでお気軽にお問い合わせください。</p>
+        </div>
         <h2>機械修理・故障相談</h2>
         <p style="font-size:1.1rem; font-weight:700; color:var(--primary); margin-bottom:1rem;">
           旋盤、フライス盤、ボール盤などの工作機械について、故障・異音・油漏れ・精度不良・動作不良の相談を受けます。
@@ -881,27 +361,15 @@
         </div>
       </section>
 
-      <!-- CM動画 -->
       <section class="hero card">
         <h2>CM動画</h2>
         <div class="reel-wrapper">
-          <video
-            class="video-embed-full"
-            src="videos/CM2.mp4"
-            loading="lazy"
-            preload="metadata"
-            muted
-            playsinline
-            autoplay
-            controls
-            poster=""
-          >
+          <video class="video-embed-full" src="videos/CM2.mp4" loading="lazy" preload="metadata" muted playsinline autoplay controls poster="">
             お使いのブラウザは video タグに対応していません。
           </video>
         </div>
       </section>
 
-      <!-- 会社概要 -->
       <section class="card" id="company-overview">
         <h2>会社概要</h2>
         <div style="display:grid;gap:1rem;">
@@ -924,13 +392,12 @@
         </div>
       </section>
 
-      <!-- 機械ドック -->
       <section class="card" id="kikai-dock">
         <h2>機械ドック</h2>
         <p style="font-size:1.1rem; font-weight:700; color:var(--primary); margin-bottom:1rem;">古い工作機械の点検サービス</p>
         <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:1rem;">
           旋盤・ボール盤・ラジアルボール盤・帯鋸盤・フライス盤など、長年使っている工作機械を止まる前に点検します。<br>
-          異音、油漏れ、送り不良、昇降不良、スイッチ不良などを現地で確認し、今すぐ修理すべき箇所、しばらく様子を見られる箇所、入替を検討すべき機械を分かりやすく整理します。<br>
+          異音、油漏れ、送り不良、昇降不良、スイッチ不良などを現地で確認し、今すぐ修理すべき箇所、しばらく様子を見られる箇所、入替を検討する箇所を整理します。
           買い替え前の状態確認や、中古機械導入前の相談にも対応します。
         </p>
         <div style="background:var(--success-light); border-left:4px solid var(--success); border-radius:8px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
@@ -939,7 +406,7 @@
             <li>1台点検　<strong>35,000円〜</strong></li>
             <li>3台まとめて点検　<strong>90,000円〜</strong></li>
           </ul>
-          <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">※地域により交通費・出張費が別途かかる場合があります。事前に点検料金と交通費の目安をお伝えします。</p>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">※地域により交通費・出張費が別途かかる場合があります。事前に点検料金と交通費の目安をご案内します。</p>
         </div>
         <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
           <a class="btn" href="tel:08038804695" style="background:linear-gradient(135deg, #ff6600 0%, #cc5200 100%); box-shadow:0 4px 12px rgba(255,102,0,0.25);">
@@ -951,7 +418,6 @@
         </div>
       </section>
 
-      <!-- サービス -->
       <section class="card">
         <h2>主なサービス</h2>
         <ul class="service-list">
@@ -996,285 +462,7 @@
           </li>
         </ul>
       </section>
-
-      <!-- 修理写真ギャラリー -->
-      <section class="card" id="photo-gallery">
-        <h2>修理現場の写真</h2>
-        <div class="photo-grid">
-          <img
-            src="images/IMG_0766.jpg"
-            alt="工作機械の修理作業の様子"
-            class="photo-grid-item js-image-modal"
-            data-full="images/IMG_0766.jpg"
-            loading="lazy"
-          />
-          <img
-            src="images/IMG_1217.jpg"
-            alt="機械部品の点検・整備作業"
-            class="photo-grid-item js-image-modal"
-            data-full="images/IMG_1217.jpg"
-            loading="lazy"
-          />
-          <img
-            src="images/IMG_1565.jpg"
-            alt="出張修理・現場対応の様子"
-            class="photo-grid-item js-image-modal"
-            data-full="images/IMG_1565.jpg"
-            loading="lazy"
-          />
-          <img
-            src="images/IMG_2783.jpg"
-            alt="工作機械のメンテナンス・修理完了後"
-            class="photo-grid-item js-image-modal"
-            data-full="images/IMG_2783.jpg"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <!-- 修理実績 -->
-      <section class="card" id="repair-records" aria-labelledby="repair-records-title">
-        <h2 id="repair-records-title">修理実績</h2>
-        <div style="overflow-x:auto;">
-          <table class="repair-table">
-            <thead>
-              <tr>
-                <th>年月</th>
-                <th>会社名</th>
-                <th>機械の種類</th>
-                <th>型式</th>
-                <th>不具合の内容</th>
-                <th>対応</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2019-10</td>
-                <td>T社製</td>
-                <td>汎用旋盤</td>
-                <td>TAL-510</td>
-                <td>刃物台不良</td>
-                <td>カミソリ調整・歯車交換</td>
-              </tr>
-              <tr>
-                <td>2021-7</td>
-                <td>M社製</td>
-                <td>NC旋盤</td>
-                <td>SL-35</td>
-                <td>油漏れ</td>
-                <td>高圧ホース製作交換</td>
-              </tr>
-              <tr>
-                <td>2021-12</td>
-                <td>M社製</td>
-                <td>ラジアルボール盤</td>
-                <td>YR5-150</td>
-                <td>主軸動作不能</td>
-                <td>マグネットスイッチ・シーケンサ交換</td>
-              </tr>
-              <tr>
-                <td>2022-1</td>
-                <td>O社製</td>
-                <td>ラジアルボール盤</td>
-                <td>DRA-J</td>
-                <td>クランプ不良</td>
-                <td>給油・点検</td>
-              </tr>
-              <tr>
-                <td>2022-9</td>
-                <td>Ｋ社製</td>
-                <td>直立ボール盤</td>
-                <td>KUD-530</td>
-                <td>送り不良</td>
-                <td>スプリングピン交換</td>
-              </tr>
-              <tr>
-                <td>2022-10</td>
-                <td>O社製</td>
-                <td>ラジアルボール盤</td>
-                <td>RE1400</td>
-                <td>主軸回転不良</td>
-                <td>クラッチ調整</td>
-              </tr>
-              <tr>
-                <td>2022-11</td>
-                <td>A社製</td>
-                <td>帯鋸盤</td>
-                <td>HA250</td>
-                <td>メインシリンダー油漏れ</td>
-                <td>シリンダー交換</td>
-              </tr>
-              <tr>
-                <td>2024-3</td>
-                <td>D社製</td>
-                <td>帯鋸盤</td>
-                <td>FTR-230</td>
-                <td>昇降不良</td>
-                <td>スイッチ交換</td>
-              </tr>
-              <tr>
-                <td>2024-3</td>
-                <td>S社製</td>
-                <td>チップコンベアー</td>
-                <td>-</td>
-                <td>動作不良</td>
-                <td>部品交換</td>
-              </tr>
-              <tr>
-                <td>2024-4</td>
-                <td>W社製</td>
-                <td>汎用旋盤</td>
-                <td>LEO型</td>
-                <td>送りキー破損</td>
-                <td>Ｔ字キー交換</td>
-              </tr>
-              <tr>
-                <td>2024-4</td>
-                <td>N社製</td>
-                <td>転造盤</td>
-                <td>ＦＡ16</td>
-                <td>圧力ゲージ不良</td>
-                <td>ゲージ交換</td>
-              </tr>
-               <tr>
-                <td>2025-10</td>
-                <td>A社製</td>
-                <td>帯鋸盤</td>
-                <td>H650HD</td>
-                <td>メインバイス不良</td>
-                <td>シリンダー取り外し折れネジ除去</td>
-               </tr>
-               <tr>
-                <td>2025-11</td>
-                <td>O社製</td>
-                <td>横マシ</td>
-                <td>500</td>
-                <td>設置据え付けセットアップ</td>
-                <td>立ち上げ請負一式</td>
-              </tr>
-              <tr>
-                <td>2025-12</td>
-                <td>Y社製</td>
-                <td>直立ボール盤</td>
-                <td>YD2-54</td>
-                <td>作動不能</td>
-                <td>リミットスイッチ交換はんだづけ</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div style="margin-top:2rem; padding:1.5rem; background:var(--success-light); border-radius:8px; text-align:center;">
-          <p style="font-weight:600; font-size:1.1rem; color:var(--text-primary); margin-bottom:1rem;">
-            他多数の修理実績あります。<br>
-            一度お問い合わせください。
-          </p>
-          <a href="tel:08038804695" style="font-size:1.5rem; font-weight:700; color:var(--primary);">080-3880-4695</a>
-        </div>
-      </section>
-
-      <!-- お問い合わせ -->
-      <section class="contact card">
-        <h2>お問い合わせ</h2>
-        <p>お気軽にご相談ください</p>
-        <form method="POST" action="mailto:info@kikai.work?subject=お問い合わせ" enctype="text/plain" autocomplete="off">
-          <input type="text" name="company" value="" class="hidden-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <a class="btn" href="mailto:info@kikai.work?subject=お問い合わせ">メールで問い合わせる</a>
-        </form>
-      </section>
     </main>
-
-    <!-- サイドバー -->
-    <aside class="sidebar">
-      <!-- ブログ -->
-      <div class="card">
-        <a href="https://luster55.hateblo.jp/" class="blog-link" target="_blank" rel="noopener noreferrer">▶ キカイブログ</a>
-        <ul class="blog-list">
-          <li><a href="https://luster55.hateblo.jp/entry/2024/10/15/100000" target="_blank" rel="noopener noreferrer">旋盤修理日記：主軸ベアリング交換</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/09/27/100000" target="_blank" rel="noopener noreferrer">NC旋盤の油圧ユニット修理例</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/09/10/100000" target="_blank" rel="noopener noreferrer">ラジアルボール盤のクランプ不良</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/08/25/100000" target="_blank" rel="noopener noreferrer">古い旋盤の電装トラブル対応</a></li>
-          <li><a href="https://luster55.hateblo.jp/entry/2024/07/30/100000" target="_blank" rel="noopener noreferrer">帯鋸盤シリンダー修理レポート</a></li>
-        </ul>
-      </div>
-
-      <!-- 中古機械情報 -->
-      <div class="card">
-        <a href="https://www.jp.usedmachinery.bz/members/general_view/881" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;"
-          <span style="display:block;font-weight:700;color:var(--primary);font-size:1.05rem;">中古機械情報百貨店</span>
-        </a>
-      </div>
-
-      <!-- COSEN -->
-      <div class="card">
-        <a href="https://www.cosen.com/ja/category/Automatic-bandsaw_Scissor-Style.html" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;">
-          <img src="images/画像/C-620NC.jpg" alt="COSEN C-620NC" class="cosen-banner">
-          <span style="display:block;font-weight:700;color:var(--primary);font-size:1.05rem;">COSEN 
-          自動バンドソー　帯鋸盤</span>
-        </a>
-      </div>
-
-      <!-- Instagram -->
-      <div class="card">
-        <h2 style="font-size:1.3rem;">Instagram</h2>
-        <div class="insta-profile">
-          <img class="avatar" src="./images/syasyou2.jpeg" alt="代表写真" loading="lazy">
-          <div>
-            <div style="font-weight:700;font-size:1.05rem;">@luster_machinery</div>
-            <div style="color:var(--text-muted); font-size:0.9rem; margin-top:0.25rem;">中古機械・修理 / 動画で修理事例を公開</div>
-            <a class="follow-btn" href="https://www.instagram.com/luster_machinery/" target="_blank" rel="noopener noreferrer">フォローする</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- その他リンク -->
-      <div class="card">
-        <h2 style="font-size:1.3rem;">その他リンク</h2>
-        <ul style="padding-left:1.25rem; margin:0; line-height:2;">
-          <li><a href="#top">トップに戻る</a></li>
-          <li><a href="#repair-records">修理実績</a></li>
-          <li><a href="https://www.facebook.com/luster50m/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="https://luster55.hateblo.jp/" target="_blank" rel="noopener noreferrer">ブログ</a></li>
-          <li><a href="https://www.cosen.com/ja/category/Automatic-bandsaw_Scissor-Style.html" target="_blank" rel="noopener noreferrer">COSEN 自動バンドソー</a></li>
-        </ul>
-      </div>
-    </aside>
   </div>
-
-  <!-- フッター -->
-  <footer>
-    <div style="max-width:1200px; margin:0 auto; padding:0 1rem;">
-      <div style="display:flex; flex-wrap:wrap; gap:3rem; justify-content:space-between; margin-bottom:2rem;">
-        <div style="flex:1; min-width:280px;">
-          <h3 style="font-size:1.3rem; margin-bottom:1rem;">ラスターマシナリー</h3>
-          <address>
-            〒720-0311<br>
-            広島県福山市沼隈町常石2743<br>
-            TEL: <a href="tel:080-3880-4695" style="font-weight:700;">080-3880-4695</a><br>
-            Email: <a href="mailto:info@kikai.work" style="font-weight:700;">info@kikai.work</a><br>
-            営業時間: 9:00-18:00
-          </address>
-        </div>
-        <div style="flex:1; min-width:280px;">
-          <h4 style="font-size:1.1rem; margin-bottom:1rem;">対応エリア</h4>
-          <p style="line-height:1.8;">
-            <strong style="font-size:1.1rem; color:#a7d8ff;">全国出張対応</strong><br>
-            広島県、岡山県、山口県、鳥取県、島根県<br>
-            （中国地方全域）
-          </p>
-        </div>
-      </div>
-      <div style="text-align:center; padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.2);">
-        <p style="margin:0; color:rgba(255,255,255,0.8);">&copy; 2025 ラスターマシナリー. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- 画像モーダル -->
-<div class="image-modal" id="imageModal" aria-hidden="true">
-  <div class="image-modal__content" role="dialog" aria-modal="true" aria-label="画像拡大">
-    <button type="button" class="image-modal__close" id="imageModalClose" aria-label="閉じる">×</button>
-    <img class="image-modal__img" id="imageModalImg" alt="">
-  </div>
-</div>
- <script src="./modal.js" defer></script>
 </body>
 </html>
