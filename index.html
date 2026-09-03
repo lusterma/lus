@@ -208,6 +208,30 @@
     }
     .notice-meta p { margin: 0; color: var(--text-secondary); }
     .notice-meta strong { color: var(--primary); }
+    .notice-page-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 1rem 0;
+      padding: 1rem 1.15rem;
+      color: #fff;
+      background: linear-gradient(135deg, #c94a17 0%, #9d2f0b 100%);
+      border-radius: 12px;
+      box-shadow: 0 5px 16px rgba(157, 47, 11, 0.24);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .notice-page-link:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(157, 47, 11, 0.3);
+      text-decoration: none;
+    }
+    .notice-page-link strong { display: block; font-size: 1.08rem; }
+    .notice-page-link small { display: block; margin-top: 0.25rem; color: rgba(255,255,255,0.88); }
+    .notice-page-arrow { flex: 0 0 auto; font-size: 1.55rem; line-height: 1; }
+    .notice-image-link { display: block; width: fit-content; max-width: 100%; margin: 1rem auto; }
     ul.service-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
     ul.service-list li { background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-light); display: flex; gap: 1.5rem; align-items: flex-start; transition: all 0.3s ease; }
     ul.service-list li:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent); }
@@ -281,7 +305,7 @@
     .photo-grid-item { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: zoom-in; display: block; transition: opacity 0.2s ease, transform 0.2s ease; }
     .photo-grid-item:hover { opacity: 0.9; transform: scale(1.02); }
     @media (max-width: 700px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
-    .notice-image { width: 100%; max-width: 720px; height: auto; border-radius: 12px; margin: 1rem 0; box-shadow: 0 4px 14px rgba(0,0,0,0.12); display: block; }
+    .notice-image { width: 100%; max-width: 420px; height: auto; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); display: block; }
   </style>
 </head>
 <body>
@@ -330,8 +354,27 @@
           <span class="notice-badge">JIMTOF2026 出展情報</span>
           <h3>【COSEN、JIMTOF2026に出展】</h3>
           <p>バンドソーメーカー「COSEN」が、東京ビッグサイトで開催されるJIMTOF2026に出展します。</p>
-          <img src="./images/ChatGPT Image 2026年8月28日 16_40_45.png" alt="JIMTOF2026出展告知画像" class="notice-image" loading="lazy" />
-          <p>会場では、全自動横型バンドシー「G320」を展示予定。高剛性のデュアルコラム構造、安定した切断性能、自動送りによる量産性など、COSENの機械の魅力をぜひご覧ください。</p>
+          <a class="notice-page-link" href="./cosen-jp/">
+            <span>
+              <strong>JIMTOF2026 特設ページを見る</strong>
+              <small>G320の展示内容・切断例・来場前相談</small>
+            </span>
+            <span class="notice-page-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="notice-image-link" href="./cosen-jp/" aria-label="COSEN JIMTOF2026特設ページを見る">
+            <img
+              src="./cosen-jp/assets/jimtof2026-poster-640.jpg"
+              srcset="./cosen-jp/assets/jimtof2026-poster-640.jpg 640w, ./cosen-jp/assets/jimtof2026-poster-1200.jpg 1200w"
+              sizes="(max-width: 700px) calc(100vw - 80px), 420px"
+              width="1003"
+              height="1568"
+              alt="COSEN G320のJIMTOF2026出展告知ポスター"
+              class="notice-image"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <p>会場では、全自動横型バンドソー「G320」を展示予定。高剛性のデュアルコラム構造、安定した切断性能、自動送りによる量産性など、COSENの機械の魅力をぜひご覧ください。</p>
           <p>欧米をはじめ世界各国で導入されているCOSENの帯鋸盤を、ぜひ会場でご覧ください。</p>
           <div class="notice-meta">
             <p><strong>開催期間：</strong>2026年10月26日（月）～10月31日（土）</p>
