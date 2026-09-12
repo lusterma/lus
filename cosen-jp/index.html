@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AM-437621873"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-601686G97M"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AM-437621873');
+      gtag('config', 'G-601686G97M');
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -3559,6 +3559,14 @@
         });
       });
 
+      // Measure contact intent only; no form values are sent to Analytics.
+      document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+        link.addEventListener('click', () => window.gtag?.('event', 'cosen_email_click'));
+      });
+      document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+        link.addEventListener('click', () => window.gtag?.('event', 'cosen_phone_click'));
+      });
+
       const consultationForm = document.querySelector('#consultation-form');
       const selectionFields = document.querySelector('#selection-fields');
       const repairFields = document.querySelector('#repair-fields');
@@ -3696,6 +3704,7 @@
 
         if (contactError) contactError.textContent = '';
         if (copyStatus) copyStatus.textContent = '';
+        window.gtag?.('event', 'cosen_email_open');
         window.location.href = `mailto:info@kikai.work?subject=${encodeURIComponent(content.subject)}&body=${encodeURIComponent(content.body)}`;
       });
 
